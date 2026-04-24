@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>銷售之鑰 V2｜徹底終結銷售努力，打造 AI 驅動的自動化成交帝國</title>
+<meta name="description" content="不再依賴個人魅力、不再靠運氣成交。TNPSC 五步絕殺引擎 × AI 自動化軍團，讓你從銷售員進化為操盤手。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #050608;
+    --bg-1: #0b0c10;
+    --bg-2: #14161d;
+    --line: rgba(201, 164, 91, 0.18);
+    --line-2: rgba(201, 164, 91, 0.35);
+    --gold-0: #f6dd8f;
+    --gold-1: #d4af5b;
+    --gold-2: #b68a3b;
+    --gold-3: #7c5620;
+    --blood: #8a1a1a;
+    --blood-soft: rgba(138, 26, 26, 0.16);
+    --ink-0: #f5f2ea;
+    --ink-1: #cfc9bd;
+    --ink-2: #8b8778;
+    --ink-3: #4f4c42;
+    --ok: #74c69d;
+    --radius: 14px;
+    --container: 1180px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg-0);
+    color: var(--ink-0);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: "Noto Serif TC", serif; letter-spacing: 0.04em; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+  .gold {
+    background: linear-gradient(135deg, var(--gold-0) 0%, var(--gold-1) 45%, var(--gold-3) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .blood-ink { color: #e8a9a9; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 18px 36px; border-radius: 999px;
+    font-weight: 700; font-size: 17px; letter-spacing: 0.05em;
+    cursor: pointer; transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: none; white-space: nowrap;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold-0) 0%, var(--gold-1) 60%, var(--gold-3) 100%);
+    color: #1a1408;
+    box-shadow: 0 10px 40px -12px rgba(212,175,91,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 50px -12px rgba(212,175,91,0.75), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .btn-ghost { background: transparent; color: var(--gold-1); border: 1px solid var(--gold-2); }
+  .btn-ghost:hover { background: rgba(201,164,91,0.08); }
+  .eyebrow {
+    display: inline-block; font-size: 12px; letter-spacing: 0.4em;
+    color: var(--gold-1); padding: 6px 18px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: rgba(255,255,255,0.02);
+    text-transform: uppercase;
+  }
+  .eyebrow.blood {
+    color: #e8a9a9; border-color: rgba(138,26,26,0.4);
+    background: var(--blood-soft);
+  }
+  h1, h2, h3, h4 { font-family: "Noto Serif TC", serif; font-weight: 700; letter-spacing: 0.03em; }
+  h2.section-title { font-size: clamp(28px, 3.5vw, 48px); line-height: 1.25; margin: 18px 0 14px; }
+  .section-sub { color: var(--ink-1); font-size: clamp(15px, 1.3vw, 17px); max-width: 780px; }
+  section { padding: 120px 0; position: relative; }
+  .section-head { text-align: center; margin-bottom: 64px; }
+  .section-head .section-sub { margin: 0 auto; }
+  .divider {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    color: var(--gold-2); margin: 24px auto;
+  }
+  .divider::before, .divider::after {
+    content: ""; width: 100px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+  }
+
+  /* ===== NAV ===== */
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(5,6,8,0.78);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .container {
+    display: flex; align-items: center; justify-content: space-between; height: 72px;
+  }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--gold-0), var(--gold-3));
+    display: flex; align-items: center; justify-content: center;
+    color: #1a1408; font-weight: 900; font-size: 18px;
+    box-shadow: 0 6px 20px -8px rgba(212,175,91,0.6);
+  }
+  .logo-name { font-family: "Noto Serif TC", serif; font-size: 17px; letter-spacing: 0.15em; }
+  .nav-links { display: flex; gap: 32px; font-size: 14px; color: var(--ink-1); }
+  .nav-links a:hover { color: var(--gold-1); }
+  @media (max-width: 820px) { .nav-links { display: none; } }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 180px 0 140px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 0%, rgba(212,175,91,0.22), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 15% 100%, rgba(138,26,26,0.12), transparent 70%),
+      linear-gradient(180deg, #050608, #0a0b10);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.04) 1px, transparent 1px);
+    background-size: 90px 90px;
+    mask-image: radial-gradient(ellipse 60% 80% at 50% 40%, black 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 80% at 50% 40%, black 0%, transparent 80%);
+    pointer-events: none;
+  }
+  .hero-inner { text-align: center; position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 18px; border-radius: 999px;
+    background: var(--blood-soft); color: #e8a9a9;
+    font-size: 12px; letter-spacing: 0.3em;
+    border: 1px solid rgba(138,26,26,0.35);
+    margin-bottom: 26px;
+  }
+  .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #e8a9a9; box-shadow: 0 0 10px rgba(232,169,169,0.8); }
+  .hero h1 { font-size: clamp(34px, 5.8vw, 80px); line-height: 1.18; margin-bottom: 28px; }
+  .hero h1 .small { display: block; font-size: 0.55em; color: var(--ink-1); font-weight: 500; letter-spacing: 0.3em; margin-bottom: 14px; }
+  .hero h1 .line { display: block; }
+  .hero-sub {
+    font-size: clamp(16px, 1.5vw, 20px); color: var(--ink-1);
+    max-width: 780px; margin: 0 auto 44px; line-height: 1.95;
+  }
+  .hero-sub strong { color: var(--gold-0); font-weight: 500; }
+  .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+  .hero-strip {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .hero-strip .cell {
+    text-align: center; padding: 24px 18px;
+    background: rgba(11,12,16,0.8);
+  }
+  .hero-strip .num { font-family: "Noto Serif TC", serif; font-size: 34px; color: var(--gold-1); font-weight: 700; line-height: 1; }
+  .hero-strip .label { font-size: 12px; color: var(--ink-2); letter-spacing: 0.18em; margin-top: 8px; }
+  @media (max-width: 720px) { .hero-strip { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ===== AWAKENING ===== */
+  .awake {
+    background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
+    position: relative;
+  }
+  .awake-hero {
+    max-width: 880px; margin: 0 auto 72px; text-align: center;
+  }
+  .awake-hero .big {
+    font-family: "Noto Serif TC", serif;
+    font-size: clamp(26px, 3.4vw, 42px);
+    line-height: 1.55; margin: 24px 0 28px;
+  }
+  .awake-hero .big em { font-style: normal; color: var(--gold-1); }
+  .awake-hero .note {
+    display: inline-block; padding: 12px 28px;
+    border: 1px solid var(--line); border-radius: 8px;
+    background: rgba(255,255,255,0.02); color: var(--ink-1); font-size: 15px;
+  }
+  .awake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .awake-card {
+    padding: 36px 28px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    position: relative; transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .awake-card:hover { border-color: var(--line-2); transform: translateY(-4px); }
+  .awake-card .x {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--blood-soft); color: #e8a9a9;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 700; margin-bottom: 22px;
+    border: 1px solid rgba(138,26,26,0.35);
+  }
+  .awake-card h3 { font-size: 20px; margin-bottom: 12px; color: var(--ink-0); }
+  .awake-card p { color: var(--ink-1); font-size: 15px; }
+  @media (max-width: 860px) { .awake-grid { grid-template-columns: 1fr; } }
+
+  /* ===== SHIFT (四大升級 redefined) ===== */
+  .shift {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(212,175,91,0.08), transparent 70%),
+      var(--bg-0);
+  }
+  .shift-table {
+    max-width: 960px; margin: 60px auto 0;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+    overflow: hidden;
+  }
+  .shift-row {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    padding: 22px 28px;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .shift-row:last-child { border-bottom: none; }
+  .shift-row .from, .shift-row .to { padding: 4px; }
+  .shift-row .from { color: var(--ink-2); text-decoration: line-through; text-decoration-color: rgba(232,169,169,0.45); }
+  .shift-row .to { color: var(--gold-0); font-weight: 500; font-size: 17px; font-family: "Noto Serif TC", serif; }
+  .shift-row .arrow {
+    text-align: center; color: var(--gold-1); font-size: 22px;
+  }
+  @media (max-width: 720px) {
+    .shift-row { grid-template-columns: 1fr; padding: 18px 20px; }
+    .shift-row .arrow { transform: rotate(90deg); width: 40px; margin: 6px auto; }
+  }
+
+  /* ===== 五步絕殺 ===== */
+  .engine {
+    background: var(--bg-1); position: relative; overflow: hidden;
+  }
+  .engine::after {
+    content: ""; position: absolute; top: -20%; right: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(212,175,91,0.08), transparent 65%);
+    pointer-events: none;
+  }
+  .steps {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;
+  }
+  .step-card {
+    padding: 40px 22px 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.005));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    position: relative; transition: transform 0.3s ease, border-color 0.3s ease;
+    min-height: 340px; display: flex; flex-direction: column;
+  }
+  .step-card:hover { transform: translateY(-6px); border-color: var(--gold-2); box-shadow: 0 30px 80px -40px rgba(212,175,91,0.35); }
+  .step-index {
+    position: absolute; top: -24px; left: 20px;
+    font-family: "Noto Serif TC", serif; font-size: 56px; font-weight: 900;
+    background: linear-gradient(180deg, var(--gold-0), var(--gold-3));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    line-height: 1;
+  }
+  .step-card .step-key {
+    font-family: "Noto Serif TC", serif; font-size: 24px; font-weight: 900;
+    letter-spacing: 0.14em; color: var(--gold-1);
+    margin-top: 28px; margin-bottom: 6px;
+  }
+  .step-card .sub { font-size: 12px; color: var(--ink-2); letter-spacing: 0.22em; margin-bottom: 14px; }
+  .step-card h4 { font-size: 16px; margin-bottom: 12px; color: var(--ink-0); }
+  .step-card p { color: var(--ink-1); font-size: 13.5px; flex: 1; }
+  @media (max-width: 980px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+
+  /* ===== TABOO LINES（禁忌視角） ===== */
+  .taboo {
+    background:
+      radial-gradient(ellipse 80% 60% at 0% 50%, rgba(138,26,26,0.1), transparent 70%),
+      var(--bg-0);
+  }
+  .taboo-list {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    max-width: 980px; margin: 0 auto;
+  }
+  .taboo-item {
+    padding: 28px 28px 28px 36px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    position: relative;
+  }
+  .taboo-item::before {
+    content: ""; position: absolute; left: 0; top: 12%; bottom: 12%;
+    width: 3px; background: linear-gradient(180deg, var(--gold-0), var(--gold-3));
+  }
+  .taboo-item .num {
+    font-family: "Noto Serif TC", serif; font-size: 13px;
+    color: var(--gold-1); letter-spacing: 0.3em; margin-bottom: 8px;
+  }
+  .taboo-item h4 { font-size: 20px; color: var(--ink-0); margin-bottom: 8px; line-height: 1.4; }
+  .taboo-item p { color: var(--ink-1); font-size: 14.5px; }
+  @media (max-width: 720px) { .taboo-list { grid-template-columns: 1fr; } }
+
+  /* ===== AUDIENCE / 篩選機制 ===== */
+  .audience {
+    background: var(--bg-1);
+  }
+  .audience-wrap {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    max-width: 1040px; margin: 0 auto;
+  }
+  .aud-box {
+    padding: 36px 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  }
+  .aud-box .head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    padding-bottom: 18px; border-bottom: 1px solid var(--line);
+  }
+  .aud-box.yes { border-color: rgba(116,198,157,0.25); }
+  .aud-box.no { background: linear-gradient(180deg, rgba(138,26,26,0.05), rgba(255,255,255,0)); border-color: rgba(138,26,26,0.25); }
+  .aud-box .head .tag {
+    font-family: "Noto Serif TC", serif; font-size: 14px; letter-spacing: 0.3em;
+    padding: 4px 14px; border-radius: 6px;
+  }
+  .aud-box.yes .head .tag { background: rgba(116,198,157,0.18); color: var(--ok); }
+  .aud-box.no .head .tag { background: var(--blood-soft); color: #e8a9a9; }
+  .aud-box .head h3 { font-size: 20px; }
+  .aud-box ul { list-style: none; }
+  .aud-box li {
+    padding: 10px 0 10px 28px; position: relative;
+    color: var(--ink-1); font-size: 14.5px;
+  }
+  .aud-box.yes li::before { content: "✓"; color: var(--ok); position: absolute; left: 4px; font-weight: 700; }
+  .aud-box.no li::before { content: "✕"; color: #e8a9a9; position: absolute; left: 4px; font-weight: 700; }
+  @media (max-width: 820px) { .audience-wrap { grid-template-columns: 1fr; } }
+
+  /* ===== CURRICULUM ===== */
+  .curriculum { background: var(--bg-0); }
+  .stage {
+    margin-bottom: 28px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    overflow: hidden;
+  }
+  .stage-header {
+    padding: 30px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(212,175,91,0.06), transparent 70%);
+  }
+  .stage-header .left { display: flex; align-items: center; gap: 22px; }
+  .stage-number {
+    font-family: "Noto Serif TC", serif; font-size: 40px; font-weight: 900;
+    color: var(--gold-1); line-height: 1;
+  }
+  .stage-title h3 { font-size: 24px; margin-bottom: 6px; }
+  .stage-title p { color: var(--ink-2); font-size: 13px; letter-spacing: 0.25em; }
+  .stage-goal { max-width: 420px; font-size: 14px; color: var(--ink-1); }
+  .chapter-list {
+    padding: 24px 32px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+  }
+  .chapter {
+    padding: 22px;
+    background: rgba(255,255,255,0.02);
+    border-radius: 10px;
+    border-left: 3px solid var(--gold-2);
+  }
+  .chapter .ch-num {
+    font-family: "Noto Serif TC", serif; font-size: 12px;
+    color: var(--gold-1); letter-spacing: 0.25em; margin-bottom: 6px;
+  }
+  .chapter h4 { font-size: 17px; margin-bottom: 10px; }
+  .chapter ul { list-style: none; padding: 0; margin-top: 8px; }
+  .chapter ul li {
+    font-size: 13.5px; color: var(--ink-2); padding-left: 16px; position: relative;
+    margin-bottom: 6px;
+  }
+  .chapter ul li::before { content: "◆"; color: var(--gold-2); font-size: 9px; position: absolute; left: 0; top: 6px; }
+  .chapter .taboo-line {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--blood-soft);
+    border-left: 2px solid rgba(232,169,169,0.45);
+    border-radius: 0 6px 6px 0;
+    font-size: 12.5px; color: #e8a9a9;
+    font-style: italic;
+  }
+  @media (max-width: 860px) {
+    .chapter-list { grid-template-columns: 1fr; padding: 20px; }
+    .stage-header { padding: 22px; }
+  }
+
+  /* ===== EMPIRE / AI 神格化 ===== */
+  .empire {
+    background: var(--bg-1);
+    position: relative; overflow: hidden;
+  }
+  .empire::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+    pointer-events: none;
+  }
+  .empire-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; position: relative; z-index: 1; }
+  .empire-card {
+    padding: 32px 26px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(212,175,91,0.06), rgba(255,255,255,0.01));
+    text-align: left;
+  }
+  .empire-card .icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: linear-gradient(135deg, rgba(212,175,91,0.22), rgba(201,164,91,0.06));
+    border: 1px solid var(--line-2);
+    color: var(--gold-0); display: flex; align-items: center; justify-content: center;
+    font-family: "Noto Serif TC", serif; font-weight: 900; font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .empire-card h4 { font-size: 17px; margin-bottom: 8px; }
+  .empire-card p { color: var(--ink-1); font-size: 14px; }
+  @media (max-width: 980px) { .empire-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .empire-grid { grid-template-columns: 1fr; } }
+
+  /* ===== INSTRUCTOR ===== */
+  .instructor {
+    background: radial-gradient(ellipse 50% 40% at 0% 50%, rgba(212,175,91,0.08), transparent 70%), var(--bg-0);
+  }
+  .instructor-wrap {
+    display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center;
+  }
+  .instructor-portrait {
+    aspect-ratio: 3/4; border-radius: 12px;
+    background:
+      linear-gradient(180deg, rgba(212,175,91,0.3), rgba(0,0,0,0.4)),
+      linear-gradient(45deg, #1a1f30, #2a2f45);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-2); font-family: "Noto Serif TC", serif; font-size: 64px;
+    box-shadow: 0 30px 80px -30px rgba(212,175,91,0.3);
+    position: relative; overflow: hidden;
+  }
+  .instructor-portrait::after {
+    content: ""; position: absolute; inset: 10px;
+    border: 1px solid rgba(212,175,91,0.3); border-radius: 8px;
+  }
+  .instructor-body .eyebrow { margin-bottom: 20px; }
+  .instructor-body h3 { font-size: 34px; margin-bottom: 16px; line-height: 1.3; }
+  .instructor-body .sub { color: var(--gold-1); letter-spacing: 0.15em; margin-bottom: 20px; font-size: 14px; }
+  .instructor-body p { color: var(--ink-1); margin-bottom: 14px; font-size: 15.5px; }
+  .instructor-creds {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    margin-top: 28px;
+  }
+  .cred {
+    padding: 18px; border: 1px solid var(--line); border-radius: 10px;
+    background: rgba(255,255,255,0.02);
+  }
+  .cred .n { font-family: "Noto Serif TC", serif; color: var(--gold-1); font-size: 28px; }
+  .cred .l { font-size: 12px; color: var(--ink-2); margin-top: 4px; letter-spacing: 0.1em; }
+  @media (max-width: 820px) {
+    .instructor-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .instructor-portrait { max-width: 260px; margin: 0 auto; }
+  }
+
+  /* ===== TESTIMONIAL ===== */
+  .testimonials { background: var(--bg-1); }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .test-card {
+    padding: 36px 30px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    position: relative;
+  }
+  .test-card .q {
+    font-family: "Noto Serif TC", serif; font-size: 72px;
+    color: var(--gold-2); line-height: 0.8; opacity: 0.35;
+    position: absolute; top: 20px; right: 24px;
+  }
+  .test-card blockquote {
+    color: var(--ink-0); font-size: 15px; line-height: 1.85;
+    margin-bottom: 24px; padding-right: 40px;
+  }
+  .test-author { display: flex; align-items: center; gap: 12px; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+    color: #1a1408; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .test-author h5 { font-size: 14px; }
+  .test-author .who p { font-size: 12px; color: var(--ink-2); }
+  .test-author .result {
+    margin-left: auto; font-size: 12px; color: var(--ok);
+    padding: 4px 10px; border: 1px solid rgba(116,198,157,0.3); border-radius: 999px;
+  }
+  @media (max-width: 860px) { .test-grid { grid-template-columns: 1fr; } }
+
+  /* ===== PRICING ===== */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+  .price-card {
+    padding: 40px 32px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    display: flex; flex-direction: column; position: relative;
+  }
+  .price-card.highlight {
+    border-color: var(--gold-2);
+    background: linear-gradient(180deg, rgba(212,175,91,0.09), rgba(212,175,91,0.015));
+    box-shadow: 0 30px 80px -40px rgba(212,175,91,0.4);
+    transform: scale(1.02);
+  }
+  .price-card.highlight::before {
+    content: "帝國推薦 · 主力版本";
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold-0), var(--gold-3));
+    color: #1a1408; font-size: 12px; letter-spacing: 0.2em; font-weight: 700;
+    padding: 6px 18px; border-radius: 999px; white-space: nowrap;
+  }
+  .plan-name { font-family: "Noto Serif TC", serif; color: var(--gold-1); font-size: 14px; letter-spacing: 0.3em; margin-bottom: 8px; }
+  .plan-title { font-size: 22px; margin-bottom: 6px; }
+  .plan-sub { color: var(--ink-2); font-size: 13px; margin-bottom: 24px; }
+  .plan-hours {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .plan-hours .big { font-family: "Noto Serif TC", serif; font-size: 42px; color: var(--ink-0); }
+  .plan-hours .unit { color: var(--ink-2); font-size: 14px; }
+  .plan-hours .inquire {
+    margin-left: auto; font-size: 13px; color: var(--gold-1);
+    padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
+  }
+  .feature-list { list-style: none; margin-bottom: 28px; flex: 1; }
+  .feature-list li { padding: 8px 0 8px 28px; position: relative; color: var(--ink-1); font-size: 14px; }
+  .feature-list li::before { content: "✓"; position: absolute; left: 4px; top: 8px; color: var(--gold-1); font-weight: 700; }
+  .feature-list li.muted { color: var(--ink-3); }
+  .feature-list li.muted::before { content: "—"; color: var(--ink-3); }
+  .price-card .btn { width: 100%; }
+  @media (max-width: 860px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .price-card.highlight { transform: none; }
+  }
+
+  /* ===== FAQ ===== */
+  .faq { background: var(--bg-0); }
+  .faq-wrap { max-width: 860px; margin: 0 auto; }
+  details {
+    border: 1px solid var(--line); border-radius: 12px;
+    margin-bottom: 14px; background: rgba(255,255,255,0.02); overflow: hidden;
+  }
+  details[open] { border-color: rgba(212,175,91,0.4); }
+  summary {
+    list-style: none; padding: 22px 28px;
+    font-weight: 500; font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; color: var(--ink-0);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; color: var(--gold-1); font-size: 24px; font-weight: 300;
+    transition: transform 0.3s ease; flex-shrink: 0;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .body {
+    padding: 0 28px 22px;
+    color: var(--ink-1); font-size: 14px; line-height: 1.9;
+  }
+
+  /* ===== MANIFESTO (結業要求) ===== */
+  .manifesto {
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(138,26,26,0.18), transparent 70%),
+      linear-gradient(180deg, var(--bg-0), #020309);
+    text-align: center;
+    padding: 140px 0;
+  }
+  .manifesto .container { max-width: 860px; }
+  .manifesto h2 {
+    font-size: clamp(30px, 4vw, 52px); line-height: 1.3; margin: 22px 0 28px;
+  }
+  .manifesto .quote-wall {
+    padding: 40px 32px;
+    border: 1px solid rgba(212,175,91,0.28);
+    border-radius: 14px;
+    background: rgba(15,10,8,0.6);
+    margin: 40px 0 40px; text-align: left;
+  }
+  .manifesto .quote-wall p { color: var(--ink-1); font-size: 16px; margin-bottom: 14px; }
+  .manifesto .quote-wall p:last-child { margin-bottom: 0; }
+  .manifesto .quote-wall strong { color: var(--gold-0); }
+  .manifesto .sig {
+    font-family: "Noto Serif TC", serif; color: var(--gold-1);
+    letter-spacing: 0.3em; font-size: 13px; margin-top: 20px;
+  }
+
+  /* ===== FINAL CTA ===== */
+  .final-cta {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,175,91,0.17), transparent 60%),
+      #020309;
+    padding: 140px 0; position: relative; overflow: hidden;
+  }
+  .final-cta::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 80%);
+    pointer-events: none;
+  }
+  .final-cta h2 {
+    font-size: clamp(30px, 4.5vw, 58px); line-height: 1.3;
+    max-width: 900px; margin: 20px auto 20px;
+  }
+  .final-cta p { color: var(--ink-1); max-width: 680px; margin: 0 auto 40px; font-size: 17px; }
+  .final-cta .btn { padding: 22px 48px; font-size: 18px; }
+
+  /* ===== FOOTER ===== */
+  footer { padding: 56px 0 40px; background: #020309; border-top: 1px solid var(--line); }
+  footer .container { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  footer .logo-name { font-size: 14px; }
+  footer .links { display: flex; gap: 24px; color: var(--ink-2); font-size: 13px; }
+  footer .links a:hover { color: var(--gold-1); }
+  footer .copy { color: var(--ink-3); font-size: 12px; }
+
+  .floating-line {
+    position: fixed; bottom: 28px; right: 28px; z-index: 40;
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #06c755, #00a63f);
+    color: white; font-weight: 700; border-radius: 999px;
+    box-shadow: 0 14px 40px -10px rgba(6,199,85,0.55);
+    transition: transform 0.2s ease;
+  }
+  .floating-line:hover { transform: translateY(-3px); }
+  @media (max-width: 480px) { .floating-line { bottom: 16px; right: 16px; padding: 12px 16px; font-size: 14px; } }
+
+  .lang-switch {
+    display: flex; gap: 8px; align-items: center;
+    font-size: 12px; color: var(--ink-2);
+    padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
+    margin-right: 12px;
+  }
+  .lang-switch a { color: var(--ink-2); padding: 0 4px; }
+  .lang-switch a.active { color: var(--gold-1); font-weight: 700; }
+  @media (max-width: 720px) { .lang-switch { display: none; } }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav class="top">
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">鑰</div>
+      <div class="logo-name">銷售之鑰 · V2</div>
+    </div>
+    <div class="nav-links">
+      <a href="#awake">覺醒</a>
+      <a href="#engine">五步絕殺</a>
+      <a href="#curriculum">課綱</a>
+      <a href="#empire">AI 帝國</a>
+      <a href="#pricing">方案</a>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <div class="lang-switch">
+        <a href="#" class="active">中</a>
+        <span>·</span>
+        <a href="銷售之鑰_LandingPage_v2_ja.html">日</a>
+        <span>·</span>
+        <a href="銷售之鑰_LandingPage_v2_en.html">EN</a>
+      </div>
+      <a href="#line" class="btn btn-gold" style="padding:12px 24px; font-size:14px;">加入帝國</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>THE AWAKENING · 第 12 期席次開放中</span>
+    </div>
+    <h1 class="serif">
+      <span class="small gold">銷售之鑰 · V2</span>
+      <span class="line">徹底終結「銷售努力」</span>
+      <span class="line gold">建立由 AI 驅動的</span>
+      <span class="line gold">自動化成交帝國</span>
+    </h1>
+    <p class="hero-sub">
+      不再依賴個人魅力、不再靠運氣成交。<br/>
+      一套由 <strong>TNPSC 五步絕殺引擎</strong> × <strong>AI 自動化軍團</strong> 組成的完整方法論，<br/>
+      讓你從「銷售員」進化為「操盤手」，打造 24 小時不眠不休的財富機器。
+    </p>
+    <div class="hero-ctas">
+      <a href="#line" class="btn btn-gold">
+        立即加 LINE · 鎖定第 12 期席次
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#curriculum" class="btn btn-ghost">檢視禁忌課綱</a>
+    </div>
+
+    <div class="hero-strip">
+      <div class="cell"><div class="num">4</div><div class="label">覺醒階段</div></div>
+      <div class="cell"><div class="num">12</div><div class="label">禁忌章節</div></div>
+      <div class="cell"><div class="num">5</div><div class="label">絕殺引擎</div></div>
+      <div class="cell"><div class="num">24h</div><div class="label">AI 不眠軍團</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== AWAKENING ===== -->
+<section class="awake" id="awake">
+  <div class="container">
+    <div class="awake-hero reveal">
+      <span class="eyebrow blood">PHASE I · 崩潰與覺醒</span>
+      <p class="big serif">
+        你過去所有的「業績成功」，<br/>
+        都是<em>運氣</em>；<br/>
+        而所有的「失敗」，<br/>
+        都源自於你從未擁有過<em>系統</em>。
+      </p>
+      <div class="note">個人能力 × 努力 × 話術 — 這是窮人的安慰劑。真正的強者，不販售，他們<span class="gold">收割</span>。</div>
+    </div>
+
+    <div class="awake-grid">
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>謊言揭露</h3>
+        <p>「溝通技巧」和「話術」是平庸者的止痛藥。它讓你一次成交，卻永遠無法讓你的公司<strong>穩定成交</strong>。</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>權力不對等</h3>
+        <p>你在「請求購買」，對手在「被請求購買」。階級鴻溝來自於<strong>有沒有系統</strong>，不是努力程度。</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>認知死胡同</h3>
+        <p>依賴個人魅力的銷售，注定無法規模化、無法複製、無法被 AI 放大——你終身只能是個業務員。</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>勞動力陷阱</h3>
+        <p>靠時間換成交是最低端的邏輯。你每多賣一筆，就多燒一次自己；業績成長永遠和你的加班時數綁死。</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>獵人邏輯的終結</h3>
+        <p>你還在四處狩獵客戶？高階玩家早已成為<strong>牧羊人</strong>——用系統圈養、用 AI 培育、用流程收割。</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>決定權在對方手上</h3>
+        <p>你總是焦慮等待客戶「會不會買」。而強者早已把成交的決定權，<strong>從客戶手中移交到系統設定</strong>中。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SHIFT TABLE ===== -->
+<section class="shift">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">THE SHIFT · 權力移交</span>
+      <h2 class="section-title">從「獵人」進化為<span class="gold">牧羊人</span></h2>
+      <p class="section-sub">不是要你更努力地狩獵客戶，而是讓你擁有一個能圈養、培育、收割客戶的完整系統。</p>
+    </div>
+    <div class="shift-table reveal">
+      <div class="shift-row">
+        <div class="from">依賴個人魅力的「藝術型」銷售</div>
+        <div class="arrow">➔</div>
+        <div class="to">可複製、可量化、可優化的<span class="gold">科學型成交</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">一次性、不可預測的單點成交</div>
+        <div class="arrow">➔</div>
+        <div class="to">流量 → 培育 → 成交 → 再行銷的<span class="gold">閉環帝國</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">靠業務腦袋記憶跟進，線索大量流失</div>
+        <div class="arrow">➔</div>
+        <div class="to">AI 自動標籤 × 觸發 × 培育的<span class="gold">無眠軍團</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">業績成長與加班時數成正比</div>
+        <div class="arrow">➔</div>
+        <div class="to">系統運轉與個人時間<span class="gold">完全脫鉤</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">銷售員 · 永遠的執行者</div>
+        <div class="arrow">➔</div>
+        <div class="to">操盤手 · <span class="gold">用系統產出利潤的經營者</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 五步絕殺 ENGINE ===== -->
+<section class="engine" id="engine">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">THE 5-KILL ENGINE</span>
+      <h2 class="section-title">核心武器：<span class="gold">TNPSC 五步絕殺引擎</span></h2>
+      <div class="divider">❖</div>
+      <p class="section-sub">將銷售流程徹底工業化。把原本不可控的「藝術」，變成一套可被 AI 複製、放大、執行的精準科學。</p>
+    </div>
+
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-index">01</div>
+        <div class="step-key">TRUST</div>
+        <div class="sub">信任建立 · 權威植入</div>
+        <h4>瞬間擊穿防禦</h4>
+        <p>跳過漫長的信任建立期，用破冰指令與框架掌控，在 3 分鐘內完成「專家定位」的植入。</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">02</div>
+        <div class="step-key">NEED</div>
+        <div class="sub">需求挖掘 · 深度剝皮</div>
+        <h4>連續追問至核心</h4>
+        <p>深度剝皮法讓顧客「自己說出」他未曾意識到的焦慮，把止痛需求升維成「重生」渴望。</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">03</div>
+        <div class="step-key">PAIN</div>
+        <div class="sub">問題放大 · 代價具象</div>
+        <h4>量化不行動的代價</h4>
+        <p>成本計算機 + 情境具象化，讓顧客清楚看見「不改變」的未來成本，urgency 自然浮現。</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">04</div>
+        <div class="step-key">SOLUTION</div>
+        <div class="sub">方案錨定 · 唯一出口</div>
+        <h4>錨定價值而非價格</h4>
+        <p>客製化感受設計 × 機會成本對比，讓價格在「損失避免」的框架下變得無足輕重。</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">05</div>
+        <div class="step-key">CLOSE</div>
+        <div class="sub">指令成交 · 最終收割</div>
+        <h4>讓不買變成邏輯錯誤</h4>
+        <p>排除猶豫的邏輯陷阱 × 稀缺性設計，引導顧客在<strong>最自然的時機</strong>做出決定。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TABOO VIEWS ===== -->
+<section class="taboo" id="taboo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow blood">FORBIDDEN LENS · 禁忌視角</span>
+      <h2 class="section-title">六條<span class="gold">不會公開講</span>的底層觀念</h2>
+      <p class="section-sub">這些是本課程的核心世界觀。讀懂了，你會開始用完全不同的視角看「成交」這件事。</p>
+    </div>
+
+    <div class="taboo-list">
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 01</div>
+        <h4>銷售不是說服，而是對結果的「預設」</h4>
+        <p>高手從不說服客戶，他們只是按照一套精密的流程，讓客戶「自己走到那個決定」。</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 02</div>
+        <h4>誰在提問，誰就在掌控</h4>
+        <p>業績差的人努力「介紹產品」；業績強的人「用提問建立框架」。節奏屬於掌控者。</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 03</div>
+        <h4>價格不是數字，是「損失避免」的感受</h4>
+        <p>同樣的產品，換一個框架說，價格感受就完全不同。貴與便宜，永遠是相對的。</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 04</div>
+        <h4>異議不是拒絕，是「卡點訊號」</h4>
+        <p>當顧客說「再想想」，他不是不買，是在等你幫他把最後一個顧慮排除掉。</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 05</div>
+        <h4>AI 不是工具，是你的<strong>第二副大腦</strong></h4>
+        <p>AI 最擅長的不是取代你，而是把「高手的判斷力」複製成 24 小時執行力。</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">禁忌 · 06</div>
+        <h4>成交的決定權，不該在客戶手中</h4>
+        <p>它應該在你的<strong>系統設定</strong>裡。從流量篩選到跟進節奏，每一步都由你預設。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUDIENCE ===== -->
+<section class="audience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">SELECTION · 精準篩選</span>
+      <h2 class="section-title">這門課<span class="gold">不是每個人都該來</span></h2>
+      <p class="section-sub">我們只收想打造成交帝國的經營者，而不是來聽課解憂的上班族。</p>
+    </div>
+
+    <div class="audience-wrap">
+      <div class="aud-box yes reveal">
+        <div class="head">
+          <span class="tag">YES</span>
+          <h3>你就是我要的人</h3>
+        </div>
+        <ul>
+          <li>中小企業老闆，想把公司從「靠老闆親自賣」解放出來</li>
+          <li>業務主管／銷售總監，想讓整個團隊複製 Top Sales 的能力</li>
+          <li>行銷主管，想把流量從「點擊」真正變成「營收」</li>
+          <li>高單價顧問、教練、醫美、律師、財顧</li>
+          <li>創業者，想把 AI 真正放進公司賺錢的核心</li>
+          <li>願意用 90 天把完整系統跑起來，不是來聽心得</li>
+        </ul>
+      </div>
+
+      <div class="aud-box no reveal">
+        <div class="head">
+          <span class="tag">NO</span>
+          <h3>請不要報名</h3>
+        </div>
+        <ul>
+          <li>只想學「一招話術」就搞定客戶的人</li>
+          <li>期待上完課隔天就暴增 10 倍業績的人</li>
+          <li>不願意建立流程、不願意被數據檢視的人</li>
+          <li>把 AI 當成魔法、沒有策略就亂買工具訂閱的人</li>
+          <li>課後只想交「心得報告」，不想交真實成交數據的人</li>
+          <li>滿足於現狀、對營收天花板沒有不甘心的人</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CURRICULUM ===== -->
+<section class="curriculum" id="curriculum">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">THE FULL CURRICULUM</span>
+      <h2 class="section-title"><span class="gold">四階段 · 十二章</span>禁忌課綱</h2>
+      <p class="section-sub">從心理廢墟的重建，到 AI 帝國的建構。每一章都附帶「禁忌視角」，拆解多數課程不敢講的底層邏輯。</p>
+    </div>
+
+    <!-- Stage 1 -->
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">I</div>
+          <div class="stage-title">
+            <h3>崩潰與覺醒</h3>
+            <p>THE PSYCHOLOGICAL RESET</p>
+          </div>
+        </div>
+        <div class="stage-goal">摧毀舊有銷售認知的心理廢墟，讓你意識到過去的成功是運氣，失敗來自於缺乏系統。</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 01</div>
+          <h4>銷售的終結（The End of Selling）</h4>
+          <ul>
+            <li>謊言揭露：為什麼話術是平庸者的止痛藥</li>
+            <li>權力不對等：請求購買 vs 被請求購買</li>
+            <li>認知死胡同：個人魅力無法規模化的根因</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜銷售不是說服，而是對結果的「預設」。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 02</div>
+          <h4>系統論：從獵人進化為牧羊人</h4>
+          <ul>
+            <li>勞動力陷阱：時間換成交的低端邏輯</li>
+            <li>系統定義：可複製、可放大、可自動化</li>
+            <li>權力移交：從客戶手中到系統設定中</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜獵人逐單而枯竭，牧羊人設柵欄收成。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 2 -->
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">II</div>
+          <div class="stage-title">
+            <h3>禁忌密碼</h3>
+            <p>DECODE THE BUYER</p>
+          </div>
+        </div>
+        <div class="stage-goal">掌控人性的底層邏輯。把複雜的心理學，簡化為可被團隊執行、可被 AI 放大的具體指令。</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 03</div>
+          <h4>欲望的精準定位（The Desire Hack）</h4>
+          <ul>
+            <li>痛點撕裂術：從「不需要」轉為「現在不買會失去」</li>
+            <li>價值扭曲理論：讓價格變得微不足道</li>
+            <li>創造唯一解：把方案定位成對方的唯一生路</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜顧客買的不是功能，是對未來的預設。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 04</div>
+          <h4>信任的速成路徑（The Authority Loop）</h4>
+          <ul>
+            <li>權威幻象：3 分鐘建立專家定位</li>
+            <li>認同陷阱：社會證明 × 心理共鳴</li>
+            <li>微承諾引導：進入不可逆的成交路徑</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜信任不是累積出來的，是「設計」出來的。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3 -->
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">III</div>
+          <div class="stage-title">
+            <h3>權能獲取</h3>
+            <p>THE 5-KILL ENGINE</p>
+          </div>
+        </div>
+        <div class="stage-goal">構建 TNPSC 五步絕殺成交引擎。把不可控的個人藝術，變成可被團隊與 AI 執行的精準科學。</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 05</div>
+          <h4>【TRUST】信任建立模組</h4>
+          <ul>
+            <li>破冰指令與高效開場</li>
+            <li>框架掌控：誰提問誰主導</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜節奏屬於掌控者，而不是說話最多的人。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 06</div>
+          <h4>【NEED】需求挖掘模組</h4>
+          <ul>
+            <li>深度剝皮法與連續追問架構</li>
+            <li>需求升維：從止痛藥升級到重生</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜顧客說不清的，就是成交的籌碼。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 07</div>
+          <h4>【PAIN】問題放大模組</h4>
+          <ul>
+            <li>成本計算機：量化不行動的代價</li>
+            <li>情境具象化：讓未來的失敗被看見</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜urgency 不是催，是讓顧客自己算帳。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 08</div>
+          <h4>【SOLUTION】方案錨定模組</h4>
+          <ul>
+            <li>客製化感受設計：讓顧客以為方案為他而生</li>
+            <li>價值對比術：錨定機會成本</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜方案不是賣，是讓顧客「認出自己」。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 09</div>
+          <h4>【CLOSE】指令成交模組</h4>
+          <ul>
+            <li>消除猶豫的邏輯陷阱</li>
+            <li>稀缺性設計與決策節點</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜讓「不買」變成邏輯上的自我否定。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4 -->
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">IV</div>
+          <div class="stage-title">
+            <h3>神格化 · AI 帝國</h3>
+            <p>AI-POWERED EMPIRE</p>
+          </div>
+        </div>
+        <div class="stage-goal">把 AI 變成你 24 小時不眠不休的銷售軍團。把自己從執行中解放，真正成為系統操盤手。</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 10</div>
+          <h4>AI 流量捕獲（AI Traffic Engine）</h4>
+          <ul>
+            <li>慾望文案生成：批量產出命中人性的鉤子</li>
+            <li>精準流量篩選：AI 分層鎖定高意圖高預算買家</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜名單數量不重要，質量才決定帝國規模。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 11</div>
+          <h4>AI 心理引導與跟進（AI Nurturing）</h4>
+          <ul>
+            <li>1-to-1 自動化對話：模擬高情商銷售的心理節奏</li>
+            <li>行為標籤追蹤：AI 判斷猶豫點，自動觸發促成訊息</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜AI 讓顧客在對話中自己完成決策說服。</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">CHAPTER 12</div>
+          <h4>系統的無限複製（Scale Up）</h4>
+          <ul>
+            <li>模組化遷移：跨產品、跨市場複製</li>
+            <li>從銷售員到操盤手：建立不用親自出面的利潤帝國</li>
+          </ul>
+          <div class="taboo-line">禁忌視角｜真正的財富，是睡覺時還在產生的現金流。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI EMPIRE ===== -->
+<section class="empire" id="empire">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">AI EMPIRE · 24h 軍團</span>
+      <h2 class="section-title">讓 AI 成為你<span class="gold">不眠不休的銷售軍團</span></h2>
+      <p class="section-sub">不是多一個工具，而是多一支永遠在工作的部隊。流量、培育、跟進、再行銷，全部自動化。</p>
+    </div>
+
+    <div class="empire-grid">
+      <div class="empire-card reveal">
+        <div class="icon">流</div>
+        <h4>AI 流量軍團</h4>
+        <p>批量生成命中人性的鉤子文案、廣告、短影音腳本、落地頁，24 小時做內容測試。</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">篩</div>
+        <h4>AI 名單篩選官</h4>
+        <p>依據行為、來源、互動內容，自動分層冷／溫／熱名單，讓業務只花時間在高意圖客戶。</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">聊</div>
+        <h4>AI 對話先遣隊</h4>
+        <p>24 小時自動回覆 FAQ、初步需求蒐集、預約引導，讓你睡覺時也有客戶在被處理。</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">追</div>
+        <h4>AI 行為追蹤兵</h4>
+        <p>看過方案頁？點了連結？留了一半資料？AI 自動觸發對應節奏訊息，不讓任何線索死去。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTRUCTOR ===== -->
+<section class="instructor" id="instructor">
+  <div class="container">
+    <div class="instructor-wrap">
+      <div class="instructor-portrait reveal">鑰</div>
+      <div class="instructor-body reveal">
+        <span class="eyebrow">YOUR MENTOR</span>
+        <h3 class="serif">帶你親手構築<br/>你的 AI 成交帝國</h3>
+        <div class="sub">帝國設計師 · 操盤手養成教練</div>
+        <p>過去 10 年，協助超過 100 家企業從「依賴個人銷售」升級到「系統化、可複製、可被 AI 放大」的成交模式。涵蓋 B2B 服務業、高單價教育、醫美、房仲、顧問等產業。</p>
+        <p>不教話術，不賣工具訂閱。而是幫你把成交當成「企業資產」設計——讓 AI 導入真正產生營收，讓你從執行者變成真正的操盤手。</p>
+        <div class="instructor-creds">
+          <div class="cred"><div class="n">100+</div><div class="l">輔導企業</div></div>
+          <div class="cred"><div class="n">10 年+</div><div class="l">系統設計實戰</div></div>
+          <div class="cred"><div class="n">24h</div><div class="l">AI 成交方法論</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FROM THE FRONT LINE</span>
+      <h2 class="section-title"><span class="gold">帝國成員</span>真實回饋</h2>
+      <p class="section-sub">他們不是聽完就散會，而是帶著 AI 成交藍圖回去把公司跑起來。</p>
+    </div>
+
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>以前我以為是業務能力問題。上完才知道——我根本沒系統。把五步引擎導入第一個月，提案成交率就從 22% 拉到 41%。</blockquote>
+        <div class="test-author">
+          <div class="avatar">W</div>
+          <div class="who"><h5>W 總</h5><p>B2B 顧問業｜執行長</p></div>
+          <span class="result">+19% CR</span>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>AI 跟進流程跑起來之後，業務不用再每天手動追 LINE。光是晚上自動回覆＋預約提醒，一個月多 30+ 有效預約。</blockquote>
+        <div class="test-author">
+          <div class="avatar">L</div>
+          <div class="who"><h5>L 老師</h5><p>高單價教育｜創辦人</p></div>
+          <span class="result">+30 預約/月</span>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>最有價值的是課堂上直接把我們家的 SOP、問題庫、異議庫寫出來。不是聽課，是「帶團隊做完」。新人上線時間從 3 個月縮到 3 週。</blockquote>
+        <div class="test-author">
+          <div class="avatar">C</div>
+          <div class="who"><h5>C 總監</h5><p>醫美品牌｜營運總監</p></div>
+          <span class="result">-75% 培訓期</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">CHOOSE YOUR TRACK</span>
+      <h2 class="section-title">選擇你的<span class="gold">帝國規模</span></h2>
+      <p class="section-sub">從 12 小時覺醒營，到 36 小時顧問陪跑。三種強度，對應不同階段的企業野心。</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="plan-name">VERSION A</div>
+        <div class="plan-title serif">覺醒實戰營</div>
+        <p class="plan-sub">適合企業主管班／招商說明型課程</p>
+        <div class="plan-hours">
+          <span class="big">12</span>
+          <span class="unit">小時</span>
+          <span class="inquire">方案詳情洽 LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>6 堂 × 每堂 2 小時</li>
+          <li>四階段核心觀念完整灌頂</li>
+          <li>TNPSC 五步絕殺方法論</li>
+          <li>AI 成交藍圖範例展示</li>
+          <li>當堂產出：成交流程診斷表</li>
+          <li class="muted">企業個案診斷</li>
+          <li class="muted">90 天顧問陪跑</li>
+        </ul>
+        <a href="#line" class="btn btn-ghost">加 LINE 了解 Version A</a>
+      </div>
+
+      <div class="price-card highlight reveal">
+        <div class="plan-name">VERSION B</div>
+        <div class="plan-title serif">帝國建構班</div>
+        <p class="plan-sub">適合企業內訓／顧問導入前期班</p>
+        <div class="plan-hours">
+          <span class="big">24</span>
+          <span class="unit">小時</span>
+          <span class="inquire">方案詳情洽 LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>12 堂 × 每堂 2 小時</li>
+          <li>包含 Version A 全部內容</li>
+          <li>12 章禁忌課綱逐章拆解</li>
+          <li>工作坊實作 × 案例拆解</li>
+          <li>AI 工具實作（ChatGPT / Claude / Make / n8n）</li>
+          <li>當堂產出全套模組文件</li>
+          <li class="muted">90 天顧問陪跑</li>
+        </ul>
+        <a href="#line" class="btn btn-gold">加 LINE 鎖定 Version B</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="plan-name">VERSION C</div>
+        <div class="plan-title serif">操盤手陪跑</div>
+        <p class="plan-sub">適合要真正完成導入的企業</p>
+        <div class="plan-hours">
+          <span class="big">36</span>
+          <span class="unit">小時+</span>
+          <span class="inquire">方案詳情洽 LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>課程 + 工作坊 + 系統設計 + 成果驗收</li>
+          <li>包含 Version B 全部內容</li>
+          <li>企業個案診斷與客製化</li>
+          <li>AI 自動化系統完整導入</li>
+          <li>90 天 KPI 追蹤與優化</li>
+          <li>結業需提交真實成交指標</li>
+          <li>跨部門協作流程設計</li>
+        </ul>
+        <a href="#line" class="btn btn-ghost">加 LINE 申請 Version C</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">報名前你可能想問的事</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details>
+        <summary>完全沒做過銷售的人適合上嗎？</summary>
+        <div class="body">適合。這門課不是教你話術，而是教你建立「系統」。系統思維不依賴個人銷售天賦，老闆、新手、主管都能從 Day 1 開始建構自己的成交藍圖。</div>
+      </details>
+      <details>
+        <summary>課程是線上還是實體？</summary>
+        <div class="body">Version A 提供線上公開班與企業內訓；Version B 以實體工作坊 + 線上模組混合為主；Version C 為客製化陪跑，可依企業需求調整。請加 LINE 了解下一梯開課日期。</div>
+      </details>
+      <details>
+        <summary>需要有 AI 基礎或會寫程式嗎？</summary>
+        <div class="body">不需要。課程中使用的工具（ChatGPT、Claude、Make、n8n 等）都是零程式碼工具。重點不是工具本身，而是把工具放在對的位置，設計對的流程。</div>
+      </details>
+      <details>
+        <summary>和坊間其他銷售課程／AI 課程的差異？</summary>
+        <div class="body">一般銷售課教你「更會講」；AI 課教你「工具操作」。本課程把兩者整合成企業級成交系統——從心智重構、五步絕殺，到 AI 自動化導入，產出真正能在你公司運轉的藍圖與 SOP。</div>
+      </details>
+      <details>
+        <summary>結業有什麼具體交付物？</summary>
+        <div class="body">①企業版成交流程圖 ②顧客旅程與三層需求分析 ③20 題需求挖掘題庫 ④異議處理資料庫 ⑤AI 對話流程圖 ⑥自動化跟進邏輯表 ⑦企業專屬 AI 成交系統藍圖 ⑧90 天導入路線圖。Version C 額外要求提交真實成交指標數據。</div>
+      </details>
+      <details>
+        <summary>可以用公司訓練預算／政府補助嗎？</summary>
+        <div class="body">可以。企業內訓版開立正式發票，亦可配合勞動部產業人才投資方案等補助申請（依梯次公告為準）。加 LINE 會提供申請協助文件。</div>
+      </details>
+      <details>
+        <summary>課後還能持續問問題嗎？</summary>
+        <div class="body">Version B / C 皆附 90 天 LINE 群組答疑。Version C 另含 1-on-1 顧問時段，針對你公司具體流程調優。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MANIFESTO ===== -->
+<section class="manifesto">
+  <div class="container">
+    <span class="eyebrow blood">THE FINAL REQUIREMENT</span>
+    <h2 class="serif">我們<span class="gold">不接受</span>「學習心得」。</h2>
+
+    <div class="quote-wall">
+      <p><strong>唯一認可的畢業證明：</strong></p>
+      <p>提交一份由本系統產出的<strong>真實成交紀錄</strong>，<br/>與一張<strong>企業專屬 AI 自動化成交流程圖</strong>。</p>
+      <p>這門課的價值，不在於你聽了多少觀念，<br/>而在於你公司的成交流程，是否真的<strong>動起來</strong>。</p>
+      <p>你不需要變成更厲害的業務員，<br/>你需要的是——讓你的公司不再需要「業務員」這個職位。</p>
+      <p class="sig">— 銷售之鑰 V2 · 入學宣言</p>
+    </div>
+
+    <p style="color: var(--ink-1); max-width: 640px; margin: 0 auto; font-size: 15px;">
+      我們不保證每個人都能進入帝國。<br/>但願意交付結果的人，我們會全力陪你跑到終點。
+    </p>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" id="line">
+  <div class="container">
+    <span class="eyebrow">NEXT STEP</span>
+    <h2 class="serif">從今天起，<br/><span class="gold">把成交從努力，升級為系統</span>。</h2>
+    <p>加入 LINE 官方帳號，立即領取《銷售流程自我診斷表》，並鎖定下一梯次席次。名額有限，先報先得。</p>
+    <a href="#" class="btn btn-gold" id="line-cta">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="currentColor"><path d="M20 4C10 4 2 10.4 2 18.4c0 7.2 6.4 13.2 15 14.4.6.1 1.4.3 1.6.8.2.4.1 1.1.1 1.6l-.3 1.6c-.1.5-.4 1.8 1.6 1 2-.8 10.8-6.4 14.8-10.9 2.8-3 4.2-6.4 4.2-10C39 10.4 31 4 20 4z"/></svg>
+      立即加 LINE 鎖定席次
+    </a>
+    <p style="margin-top:24px; font-size:14px; color: var(--ink-3);">
+      或直接撥打客服專線諮詢｜上班時間 10:00 - 18:00（週一至週五）
+    </p>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">鑰</div>
+      <div class="logo-name">銷售之鑰 V2 · The Sales Empire</div>
+    </div>
+    <div class="links">
+      <a href="#curriculum">課綱</a>
+      <a href="#pricing">方案</a>
+      <a href="#faq">FAQ</a>
+      <a href="#line">聯繫我們</a>
+    </div>
+    <div class="copy">© 2026 銷售之鑰 · 徹底終結銷售努力，打造 AI 驅動的自動化成交帝國.</div>
+  </div>
+</footer>
+
+<a href="#line" class="floating-line">
+  <svg width="20" height="20" viewBox="0 0 40 40" fill="currentColor"><path d="M20 4C10 4 2 10.4 2 18.4c0 7.2 6.4 13.2 15 14.4.6.1 1.4.3 1.6.8.2.4.1 1.1.1 1.6l-.3 1.6c-.1.5-.4 1.8 1.6 1 2-.8 10.8-6.4 14.8-10.9 2.8-3 4.2-6.4 4.2-10C39 10.4 31 4 20 4z"/></svg>
+  加入帝國
+</a>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

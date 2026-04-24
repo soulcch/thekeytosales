@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Key to Sales V2 | End Sales Effort. Build Your AI-Driven Empire.</title>
+<meta name="description" content="No more personal charisma. No more closing by luck. The TNPSC 5-Kill Engine × AI Automation Army evolves you from salesperson into operator." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-0: #050608;
+    --bg-1: #0b0c10;
+    --bg-2: #14161d;
+    --line: rgba(201, 164, 91, 0.18);
+    --line-2: rgba(201, 164, 91, 0.35);
+    --gold-0: #f6dd8f;
+    --gold-1: #d4af5b;
+    --gold-2: #b68a3b;
+    --gold-3: #7c5620;
+    --blood: #8a1a1a;
+    --blood-soft: rgba(138, 26, 26, 0.16);
+    --ink-0: #f5f2ea;
+    --ink-1: #cfc9bd;
+    --ink-2: #8b8778;
+    --ink-3: #4f4c42;
+    --ok: #74c69d;
+    --radius: 14px;
+    --container: 1200px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg-0); color: var(--ink-0);
+    line-height: 1.65; overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: "Playfair Display", Georgia, serif; letter-spacing: 0.01em; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+  .gold {
+    background: linear-gradient(135deg, var(--gold-0) 0%, var(--gold-1) 45%, var(--gold-3) 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 18px 32px; border-radius: 999px;
+    font-weight: 600; font-size: 15px; letter-spacing: 0.02em;
+    cursor: pointer; transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: none; white-space: nowrap;
+  }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold-0) 0%, var(--gold-1) 60%, var(--gold-3) 100%);
+    color: #1a1408;
+    box-shadow: 0 10px 40px -12px rgba(212,175,91,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 50px -12px rgba(212,175,91,0.75), inset 0 1px 0 rgba(255,255,255,0.4);
+  }
+  .btn-ghost { background: transparent; color: var(--gold-1); border: 1px solid var(--gold-2); }
+  .btn-ghost:hover { background: rgba(201,164,91,0.08); }
+  .eyebrow {
+    display: inline-block; font-size: 11px; letter-spacing: 0.32em;
+    color: var(--gold-1); padding: 6px 18px;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: rgba(255,255,255,0.02); text-transform: uppercase;
+    font-weight: 600;
+  }
+  .eyebrow.blood { color: #e8a9a9; border-color: rgba(138,26,26,0.4); background: var(--blood-soft); }
+  h1, h2, h3, h4 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; letter-spacing: -0.01em; }
+  h2.section-title { font-size: clamp(30px, 3.8vw, 52px); line-height: 1.18; margin: 18px 0 14px; }
+  .section-sub { color: var(--ink-1); font-size: clamp(15px, 1.2vw, 17px); max-width: 720px; line-height: 1.75; }
+  section { padding: 120px 0; position: relative; }
+  .section-head { text-align: center; margin-bottom: 64px; }
+  .section-head .section-sub { margin: 0 auto; }
+  .divider {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    color: var(--gold-2); margin: 24px auto;
+  }
+  .divider::before, .divider::after {
+    content: ""; width: 100px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+  }
+
+  nav.top {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: rgba(5,6,8,0.78);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo-mark {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--gold-0), var(--gold-3));
+    display: flex; align-items: center; justify-content: center;
+    color: #1a1408; font-weight: 900; font-size: 16px;
+    box-shadow: 0 6px 20px -8px rgba(212,175,91,0.6);
+  }
+  .logo-name { font-family: "Playfair Display", serif; font-size: 17px; letter-spacing: 0.05em; }
+  .nav-links { display: flex; gap: 28px; font-size: 13px; color: var(--ink-1); font-weight: 500; }
+  .nav-links a:hover { color: var(--gold-1); }
+  @media (max-width: 860px) { .nav-links { display: none; } }
+
+  .hero {
+    padding: 170px 0 140px; position: relative; overflow: hidden;
+    background:
+      radial-gradient(ellipse 50% 40% at 50% 0%, rgba(212,175,91,0.22), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 15% 100%, rgba(138,26,26,0.12), transparent 70%),
+      linear-gradient(180deg, #050608, #0a0b10);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.04) 1px, transparent 1px);
+    background-size: 90px 90px;
+    mask-image: radial-gradient(ellipse 60% 80% at 50% 40%, black 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 80% at 50% 40%, black 0%, transparent 80%);
+    pointer-events: none;
+  }
+  .hero-inner { text-align: center; position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 18px; border-radius: 999px;
+    background: var(--blood-soft); color: #e8a9a9;
+    font-size: 11px; letter-spacing: 0.28em; font-weight: 600;
+    border: 1px solid rgba(138,26,26,0.35); margin-bottom: 26px;
+    text-transform: uppercase;
+  }
+  .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #e8a9a9; box-shadow: 0 0 10px rgba(232,169,169,0.8); }
+  .hero h1 { font-size: clamp(40px, 6.5vw, 88px); line-height: 1.03; margin-bottom: 32px; letter-spacing: -0.02em; }
+  .hero h1 .small { display: block; font-size: 0.22em; color: var(--ink-1); font-weight: 500; letter-spacing: 0.28em; margin-bottom: 18px; text-transform: uppercase; font-family: "Inter", sans-serif; }
+  .hero h1 .line { display: block; }
+  .hero-sub {
+    font-size: clamp(16px, 1.3vw, 20px); color: var(--ink-1);
+    max-width: 780px; margin: 0 auto 44px; line-height: 1.7;
+  }
+  .hero-sub strong { color: var(--gold-0); font-weight: 600; }
+  .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 64px; }
+  .hero-strip {
+    max-width: 960px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+    border-radius: var(--radius); overflow: hidden;
+  }
+  .hero-strip .cell { text-align: center; padding: 24px 14px; background: rgba(11,12,16,0.8); }
+  .hero-strip .num { font-family: "Playfair Display", serif; font-size: 38px; color: var(--gold-1); font-weight: 700; line-height: 1; }
+  .hero-strip .label { font-size: 11px; color: var(--ink-2); letter-spacing: 0.14em; margin-top: 8px; text-transform: uppercase; font-weight: 500; }
+  @media (max-width: 720px) { .hero-strip { grid-template-columns: repeat(2, 1fr); } }
+
+  .awake { background: linear-gradient(180deg, var(--bg-0), var(--bg-1)); position: relative; }
+  .awake-hero { max-width: 880px; margin: 0 auto 72px; text-align: center; }
+  .awake-hero .big {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(26px, 3.4vw, 44px); line-height: 1.3; margin: 24px 0 28px;
+    font-style: italic;
+  }
+  .awake-hero .big em { font-style: italic; color: var(--gold-1); }
+  .awake-hero .note {
+    display: inline-block; padding: 14px 28px;
+    border: 1px solid var(--line); border-radius: 8px;
+    background: rgba(255,255,255,0.02); color: var(--ink-1); font-size: 15px;
+  }
+  .awake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .awake-card {
+    padding: 36px 28px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    position: relative; transition: border-color 0.3s ease, transform 0.3s ease;
+  }
+  .awake-card:hover { border-color: var(--line-2); transform: translateY(-4px); }
+  .awake-card .x {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--blood-soft); color: #e8a9a9;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; font-weight: 700; margin-bottom: 22px;
+    border: 1px solid rgba(138,26,26,0.35);
+  }
+  .awake-card h3 { font-size: 22px; margin-bottom: 12px; color: var(--ink-0); line-height: 1.3; }
+  .awake-card p { color: var(--ink-1); font-size: 15px; }
+  @media (max-width: 860px) { .awake-grid { grid-template-columns: 1fr; } }
+
+  .shift {
+    background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(212,175,91,0.08), transparent 70%), var(--bg-0);
+  }
+  .shift-table {
+    max-width: 1000px; margin: 60px auto 0;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+    overflow: hidden;
+  }
+  .shift-row {
+    display: grid; grid-template-columns: 1fr 60px 1fr;
+    align-items: center; padding: 22px 28px; gap: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+  .shift-row:last-child { border-bottom: none; }
+  .shift-row .from { color: var(--ink-2); text-decoration: line-through; text-decoration-color: rgba(232,169,169,0.45); font-size: 15px; }
+  .shift-row .to { color: var(--gold-0); font-weight: 500; font-size: 16px; font-family: "Playfair Display", serif; }
+  .shift-row .arrow { text-align: center; color: var(--gold-1); font-size: 22px; }
+  @media (max-width: 720px) {
+    .shift-row { grid-template-columns: 1fr; padding: 18px 20px; }
+    .shift-row .arrow { transform: rotate(90deg); width: 40px; margin: 6px auto; }
+  }
+
+  .engine { background: var(--bg-1); position: relative; overflow: hidden; }
+  .engine::after {
+    content: ""; position: absolute; top: -20%; right: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(212,175,91,0.08), transparent 65%);
+    pointer-events: none;
+  }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .step-card {
+    padding: 40px 22px 28px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.035), rgba(255,255,255,0.005));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    position: relative; transition: transform 0.3s ease, border-color 0.3s ease;
+    min-height: 340px; display: flex; flex-direction: column;
+  }
+  .step-card:hover { transform: translateY(-6px); border-color: var(--gold-2); box-shadow: 0 30px 80px -40px rgba(212,175,91,0.35); }
+  .step-index {
+    position: absolute; top: -24px; left: 20px;
+    font-family: "Playfair Display", serif; font-size: 56px; font-weight: 900;
+    background: linear-gradient(180deg, var(--gold-0), var(--gold-3));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    line-height: 1;
+  }
+  .step-card .step-key {
+    font-family: "Playfair Display", serif; font-size: 24px; font-weight: 900;
+    letter-spacing: 0.14em; color: var(--gold-1);
+    margin-top: 28px; margin-bottom: 6px;
+  }
+  .step-card .sub { font-size: 11px; color: var(--ink-2); letter-spacing: 0.22em; margin-bottom: 14px; text-transform: uppercase; font-weight: 500; }
+  .step-card h4 { font-size: 18px; margin-bottom: 12px; color: var(--ink-0); line-height: 1.35; }
+  .step-card p { color: var(--ink-1); font-size: 14px; flex: 1; line-height: 1.7; }
+  @media (max-width: 980px) { .steps { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .steps { grid-template-columns: 1fr; } }
+
+  .taboo { background: radial-gradient(ellipse 80% 60% at 0% 50%, rgba(138,26,26,0.1), transparent 70%), var(--bg-0); }
+  .taboo-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .taboo-item {
+    padding: 28px 28px 28px 36px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    border: 1px solid var(--line); border-radius: var(--radius); position: relative;
+  }
+  .taboo-item::before {
+    content: ""; position: absolute; left: 0; top: 12%; bottom: 12%;
+    width: 3px; background: linear-gradient(180deg, var(--gold-0), var(--gold-3));
+  }
+  .taboo-item .num {
+    font-family: "Playfair Display", serif; font-size: 12px;
+    color: var(--gold-1); letter-spacing: 0.3em; margin-bottom: 10px;
+    text-transform: uppercase; font-weight: 600;
+  }
+  .taboo-item h4 { font-size: 21px; color: var(--ink-0); margin-bottom: 10px; line-height: 1.35; }
+  .taboo-item p { color: var(--ink-1); font-size: 14.5px; line-height: 1.7; }
+  @media (max-width: 720px) { .taboo-list { grid-template-columns: 1fr; } }
+
+  .audience { background: var(--bg-1); }
+  .audience-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1040px; margin: 0 auto; }
+  .aud-box {
+    padding: 36px 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+  }
+  .aud-box .head {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    padding-bottom: 18px; border-bottom: 1px solid var(--line);
+  }
+  .aud-box.yes { border-color: rgba(116,198,157,0.25); }
+  .aud-box.no { background: linear-gradient(180deg, rgba(138,26,26,0.05), rgba(255,255,255,0)); border-color: rgba(138,26,26,0.25); }
+  .aud-box .head .tag {
+    font-family: "Playfair Display", serif; font-size: 13px; letter-spacing: 0.3em;
+    padding: 4px 14px; border-radius: 6px; font-weight: 700;
+  }
+  .aud-box.yes .head .tag { background: rgba(116,198,157,0.18); color: var(--ok); }
+  .aud-box.no .head .tag { background: var(--blood-soft); color: #e8a9a9; }
+  .aud-box .head h3 { font-size: 22px; }
+  .aud-box ul { list-style: none; }
+  .aud-box li { padding: 10px 0 10px 30px; position: relative; color: var(--ink-1); font-size: 14.5px; line-height: 1.6; }
+  .aud-box.yes li::before { content: "✓"; color: var(--ok); position: absolute; left: 4px; top: 10px; font-weight: 700; }
+  .aud-box.no li::before { content: "✕"; color: #e8a9a9; position: absolute; left: 4px; top: 10px; font-weight: 700; }
+  @media (max-width: 820px) { .audience-wrap { grid-template-columns: 1fr; } }
+
+  .curriculum { background: var(--bg-0); }
+  .stage {
+    margin-bottom: 28px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    overflow: hidden;
+  }
+  .stage-header {
+    padding: 30px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, rgba(212,175,91,0.06), transparent 70%);
+  }
+  .stage-header .left { display: flex; align-items: center; gap: 22px; }
+  .stage-number {
+    font-family: "Playfair Display", serif; font-size: 44px; font-weight: 900;
+    color: var(--gold-1); line-height: 1;
+  }
+  .stage-title h3 { font-size: 26px; margin-bottom: 4px; }
+  .stage-title p { color: var(--ink-2); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 600; }
+  .stage-goal { max-width: 420px; font-size: 14px; color: var(--ink-1); line-height: 1.6; }
+  .chapter-list { padding: 24px 32px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .chapter {
+    padding: 22px; background: rgba(255,255,255,0.02);
+    border-radius: 10px; border-left: 3px solid var(--gold-2);
+  }
+  .chapter .ch-num {
+    font-family: "Playfair Display", serif; font-size: 11px;
+    color: var(--gold-1); letter-spacing: 0.3em; margin-bottom: 6px;
+    text-transform: uppercase; font-weight: 700;
+  }
+  .chapter h4 { font-size: 17px; margin-bottom: 10px; line-height: 1.35; }
+  .chapter ul { list-style: none; padding: 0; margin-top: 8px; }
+  .chapter ul li { font-size: 13.5px; color: var(--ink-2); padding-left: 16px; position: relative; margin-bottom: 6px; line-height: 1.55; }
+  .chapter ul li::before { content: "◆"; color: var(--gold-2); font-size: 9px; position: absolute; left: 0; top: 6px; }
+  .chapter .taboo-line {
+    margin-top: 14px; padding: 12px 14px;
+    background: var(--blood-soft);
+    border-left: 2px solid rgba(232,169,169,0.45);
+    border-radius: 0 6px 6px 0;
+    font-size: 12.5px; color: #e8a9a9; font-style: italic;
+  }
+  @media (max-width: 860px) {
+    .chapter-list { grid-template-columns: 1fr; padding: 20px; }
+    .stage-header { padding: 22px; }
+  }
+
+  .empire { background: var(--bg-1); position: relative; overflow: hidden; }
+  .empire::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+    pointer-events: none;
+  }
+  .empire-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; position: relative; z-index: 1; }
+  .empire-card {
+    padding: 32px 26px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(212,175,91,0.06), rgba(255,255,255,0.01));
+  }
+  .empire-card .icon {
+    width: 48px; height: 48px; border-radius: 10px;
+    background: linear-gradient(135deg, rgba(212,175,91,0.22), rgba(201,164,91,0.06));
+    border: 1px solid var(--line-2);
+    color: var(--gold-0); display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .empire-card h4 { font-size: 18px; margin-bottom: 10px; line-height: 1.3; }
+  .empire-card p { color: var(--ink-1); font-size: 14px; line-height: 1.65; }
+  @media (max-width: 980px) { .empire-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .empire-grid { grid-template-columns: 1fr; } }
+
+  .instructor { background: radial-gradient(ellipse 50% 40% at 0% 50%, rgba(212,175,91,0.08), transparent 70%), var(--bg-0); }
+  .instructor-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+  .instructor-portrait {
+    aspect-ratio: 3/4; border-radius: 12px;
+    background:
+      linear-gradient(180deg, rgba(212,175,91,0.3), rgba(0,0,0,0.4)),
+      linear-gradient(45deg, #1a1f30, #2a2f45);
+    border: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold-2); font-family: "Playfair Display", serif; font-size: 56px;
+    box-shadow: 0 30px 80px -30px rgba(212,175,91,0.3);
+    position: relative; overflow: hidden;
+    font-weight: 900;
+  }
+  .instructor-portrait::after {
+    content: ""; position: absolute; inset: 10px;
+    border: 1px solid rgba(212,175,91,0.3); border-radius: 8px;
+  }
+  .instructor-body .eyebrow { margin-bottom: 20px; }
+  .instructor-body h3 { font-size: 38px; margin-bottom: 16px; line-height: 1.2; }
+  .instructor-body .sub { color: var(--gold-1); letter-spacing: 0.12em; margin-bottom: 20px; font-size: 13px; text-transform: uppercase; font-weight: 600; }
+  .instructor-body p { color: var(--ink-1); margin-bottom: 14px; font-size: 15.5px; line-height: 1.75; }
+  .instructor-creds { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .cred { padding: 18px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,0.02); }
+  .cred .n { font-family: "Playfair Display", serif; color: var(--gold-1); font-size: 30px; font-weight: 700; }
+  .cred .l { font-size: 11px; color: var(--ink-2); margin-top: 4px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; }
+  @media (max-width: 820px) {
+    .instructor-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .instructor-portrait { max-width: 260px; margin: 0 auto; }
+  }
+
+  .testimonials { background: var(--bg-1); }
+  .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .test-card {
+    padding: 36px 30px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    position: relative;
+  }
+  .test-card .q {
+    font-family: "Playfair Display", serif; font-size: 90px;
+    color: var(--gold-2); line-height: 0.8; opacity: 0.35;
+    position: absolute; top: 14px; right: 24px;
+  }
+  .test-card blockquote {
+    color: var(--ink-0); font-size: 15px; line-height: 1.7;
+    margin-bottom: 24px; padding-right: 40px;
+  }
+  .test-author { display: flex; align-items: center; gap: 12px; }
+  .avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-1), var(--gold-3));
+    color: #1a1408; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .test-author h5 { font-size: 14px; font-weight: 600; }
+  .test-author .who p { font-size: 12px; color: var(--ink-2); }
+  .test-author .result {
+    margin-left: auto; font-size: 11px; color: var(--ok);
+    padding: 4px 10px; border: 1px solid rgba(116,198,157,0.3); border-radius: 999px;
+    font-weight: 600; letter-spacing: 0.05em;
+  }
+  @media (max-width: 860px) { .test-grid { grid-template-columns: 1fr; } }
+
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; align-items: stretch; }
+  .price-card {
+    padding: 40px 32px;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+    display: flex; flex-direction: column; position: relative;
+  }
+  .price-card.highlight {
+    border-color: var(--gold-2);
+    background: linear-gradient(180deg, rgba(212,175,91,0.09), rgba(212,175,91,0.015));
+    box-shadow: 0 30px 80px -40px rgba(212,175,91,0.4);
+    transform: scale(1.02);
+  }
+  .price-card.highlight::before {
+    content: "Empire's Choice · Flagship";
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--gold-0), var(--gold-3));
+    color: #1a1408; font-size: 11px; letter-spacing: 0.18em; font-weight: 700;
+    padding: 6px 18px; border-radius: 999px; white-space: nowrap;
+    text-transform: uppercase;
+  }
+  .plan-name { font-family: "Playfair Display", serif; color: var(--gold-1); font-size: 12px; letter-spacing: 0.35em; margin-bottom: 8px; text-transform: uppercase; font-weight: 700; }
+  .plan-title { font-size: 24px; margin-bottom: 6px; }
+  .plan-sub { color: var(--ink-2); font-size: 13px; margin-bottom: 24px; line-height: 1.5; }
+  .plan-hours {
+    display: flex; align-items: baseline; gap: 8px;
+    padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+  .plan-hours .big { font-family: "Playfair Display", serif; font-size: 46px; color: var(--ink-0); font-weight: 700; }
+  .plan-hours .unit { color: var(--ink-2); font-size: 14px; }
+  .plan-hours .inquire {
+    margin-left: auto; font-size: 12px; color: var(--gold-1);
+    padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px;
+    font-weight: 500;
+  }
+  .feature-list { list-style: none; margin-bottom: 28px; flex: 1; }
+  .feature-list li { padding: 8px 0 8px 28px; position: relative; color: var(--ink-1); font-size: 14px; line-height: 1.55; }
+  .feature-list li::before { content: "✓"; position: absolute; left: 4px; top: 8px; color: var(--gold-1); font-weight: 700; }
+  .feature-list li.muted { color: var(--ink-3); }
+  .feature-list li.muted::before { content: "—"; color: var(--ink-3); }
+  .price-card .btn { width: 100%; }
+  @media (max-width: 860px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .price-card.highlight { transform: none; }
+  }
+
+  .faq { background: var(--bg-0); }
+  .faq-wrap { max-width: 880px; margin: 0 auto; }
+  details {
+    border: 1px solid var(--line); border-radius: 12px;
+    margin-bottom: 14px; background: rgba(255,255,255,0.02); overflow: hidden;
+  }
+  details[open] { border-color: rgba(212,175,91,0.4); }
+  summary {
+    list-style: none; padding: 22px 28px;
+    font-weight: 500; font-size: 16px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; color: var(--ink-0);
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; color: var(--gold-1); font-size: 24px; font-weight: 300;
+    transition: transform 0.3s ease; flex-shrink: 0;
+  }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .body { padding: 0 28px 22px; color: var(--ink-1); font-size: 14px; line-height: 1.8; }
+
+  .manifesto {
+    background:
+      radial-gradient(ellipse 70% 50% at 50% 0%, rgba(138,26,26,0.18), transparent 70%),
+      linear-gradient(180deg, var(--bg-0), #020309);
+    text-align: center; padding: 140px 0;
+  }
+  .manifesto .container { max-width: 880px; }
+  .manifesto h2 { font-size: clamp(32px, 4.2vw, 56px); line-height: 1.2; margin: 22px 0 28px; }
+  .manifesto .quote-wall {
+    padding: 40px 32px;
+    border: 1px solid rgba(212,175,91,0.28);
+    border-radius: 14px;
+    background: rgba(15,10,8,0.6);
+    margin: 40px 0 40px; text-align: left;
+  }
+  .manifesto .quote-wall p { color: var(--ink-1); font-size: 16px; margin-bottom: 16px; line-height: 1.7; }
+  .manifesto .quote-wall p:last-child { margin-bottom: 0; }
+  .manifesto .quote-wall strong { color: var(--gold-0); }
+  .manifesto .sig {
+    font-family: "Playfair Display", serif; color: var(--gold-1);
+    letter-spacing: 0.25em; font-size: 12px; margin-top: 20px;
+    text-transform: uppercase; font-weight: 600;
+  }
+
+  .final-cta {
+    text-align: center;
+    background:
+      radial-gradient(ellipse 70% 70% at 50% 50%, rgba(212,175,91,0.17), transparent 60%),
+      #020309;
+    padding: 140px 0; position: relative; overflow: hidden;
+  }
+  .final-cta::before {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(212,175,91,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212,175,91,0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black, transparent 80%);
+    pointer-events: none;
+  }
+  .final-cta h2 { font-size: clamp(32px, 4.8vw, 62px); line-height: 1.15; max-width: 900px; margin: 20px auto 20px; }
+  .final-cta p { color: var(--ink-1); max-width: 680px; margin: 0 auto 40px; font-size: 17px; line-height: 1.6; }
+  .final-cta .btn { padding: 22px 44px; font-size: 17px; }
+
+  footer { padding: 56px 0 40px; background: #020309; border-top: 1px solid var(--line); }
+  footer .container { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  footer .logo-name { font-size: 14px; }
+  footer .links { display: flex; gap: 24px; color: var(--ink-2); font-size: 13px; }
+  footer .links a:hover { color: var(--gold-1); }
+  footer .copy { color: var(--ink-3); font-size: 12px; }
+
+  .floating-line {
+    position: fixed; bottom: 28px; right: 28px; z-index: 40;
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    background: linear-gradient(135deg, #06c755, #00a63f);
+    color: white; font-weight: 700; border-radius: 999px;
+    box-shadow: 0 14px 40px -10px rgba(6,199,85,0.55);
+    transition: transform 0.2s ease;
+    font-size: 14px;
+  }
+  .floating-line:hover { transform: translateY(-3px); }
+  @media (max-width: 480px) { .floating-line { bottom: 16px; right: 16px; padding: 12px 16px; font-size: 13px; } }
+
+  .lang-switch {
+    display: flex; gap: 8px; align-items: center;
+    font-size: 12px; color: var(--ink-2);
+    padding: 6px 14px; border: 1px solid var(--line); border-radius: 999px;
+    margin-right: 12px; font-weight: 500;
+  }
+  .lang-switch a { color: var(--ink-2); padding: 0 4px; }
+  .lang-switch a.active { color: var(--gold-1); font-weight: 700; }
+  @media (max-width: 720px) { .lang-switch { display: none; } }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease, transform 0.9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-name">The Key to Sales · V2</div>
+    </div>
+    <div class="nav-links">
+      <a href="#awake">Awakening</a>
+      <a href="#engine">5-Kill Engine</a>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#empire">AI Empire</a>
+      <a href="#pricing">Plans</a>
+    </div>
+    <div style="display:flex; align-items:center;">
+      <div class="lang-switch">
+        <a href="銷售之鑰_LandingPage_v2.html">中</a>
+        <span>·</span>
+        <a href="銷售之鑰_LandingPage_v2_ja.html">日</a>
+        <span>·</span>
+        <a href="#" class="active">EN</a>
+      </div>
+      <a href="#line" class="btn btn-gold" style="padding:12px 22px; font-size:13px;">Enter the Empire</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      <span>The Awakening · Cohort 12 Now Open</span>
+    </div>
+    <h1 class="serif">
+      <span class="small gold">The Key to Sales · V2</span>
+      <span class="line">End the Era of</span>
+      <span class="line">"Sales Effort."</span>
+      <span class="line gold">Build an AI-Driven Empire.</span>
+    </h1>
+    <p class="hero-sub">
+      No more reliance on personal charisma. No more closing by luck.<br/>
+      A complete methodology built on the <strong>TNPSC 5-Kill Engine</strong> × <strong>AI Automation Army</strong>—<br/>
+      evolving you from <em>salesperson</em> into <em>operator</em>, running a 24/7 revenue machine.
+    </p>
+    <div class="hero-ctas">
+      <a href="#line" class="btn btn-gold">
+        Add LINE · Lock In Cohort 12
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#curriculum" class="btn btn-ghost">View the Forbidden Curriculum</a>
+    </div>
+
+    <div class="hero-strip">
+      <div class="cell"><div class="num">4</div><div class="label">Awakening Phases</div></div>
+      <div class="cell"><div class="num">12</div><div class="label">Forbidden Chapters</div></div>
+      <div class="cell"><div class="num">5</div><div class="label">Kill Engine Steps</div></div>
+      <div class="cell"><div class="num">24h</div><div class="label">AI Sleepless Army</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="awake" id="awake">
+  <div class="container">
+    <div class="awake-hero reveal">
+      <span class="eyebrow blood">Phase I · Collapse & Awakening</span>
+      <p class="big serif">
+        Every past "win" was <em>luck</em>.<br/>
+        Every past loss came from one thing—<br/>
+        you never had a <em>system</em>.
+      </p>
+      <div class="note">Personal charisma × effort × sales scripts — these are painkillers for the mediocre. Real players don't sell. They <span class="gold">harvest</span>.</div>
+    </div>
+
+    <div class="awake-grid">
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>The Lie Exposed</h3>
+        <p>"Communication skills" and "scripts" are painkillers for the mediocre. They may close one deal — they'll never give your company <strong>repeatable</strong> revenue.</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>Power Asymmetry</h3>
+        <p>You're on the "asking to sell" side. Winners are on the "being asked to buy" side. The gap isn't effort — it's <strong>having a system</strong>.</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>The Cognitive Dead-End</h3>
+        <p>Sales built on personal charisma can't scale, can't be replicated, and can't be amplified by AI. You'll stay a salesperson forever.</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>The Labor Trap</h3>
+        <p>Trading time for deals is the lowest form of business. Every close burns you down again — revenue grows in lockstep with your overtime.</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>End of the Hunter's Logic</h3>
+        <p>Still chasing leads one by one? The elite moved on. They became <strong>shepherds</strong> — enclosing with systems, raising with AI, harvesting on schedule.</p>
+      </div>
+      <div class="awake-card reveal">
+        <div class="x">✕</div>
+        <h3>The Decision Isn't Yours</h3>
+        <p>You anxiously wait to see if the customer "will buy." The powerful moved that decision <strong>from the customer's hands into their system settings</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="shift">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Shift · Power Transfer</span>
+      <h2 class="section-title">From Hunter to <span class="gold">Shepherd</span></h2>
+      <p class="section-sub">Stop chasing harder. Start enclosing, nurturing, and harvesting — by system, not by force of will.</p>
+    </div>
+    <div class="shift-table reveal">
+      <div class="shift-row">
+        <div class="from">"Art" selling, dependent on charisma</div>
+        <div class="arrow">➔</div>
+        <div class="to">Replicable, measurable, optimizable <span class="gold">"science" of closing</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">One-shot, unpredictable transactions</div>
+        <div class="arrow">➔</div>
+        <div class="to">Traffic → nurture → close → remarket <span class="gold">closed-loop empire</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">Follow-up from memory, leads slipping away</div>
+        <div class="arrow">➔</div>
+        <div class="to">AI auto-tagging × triggering × nurturing <span class="gold">sleepless army</span></div>
+      </div>
+      <div class="shift-row">
+        <div class="from">Revenue growth locked to your overtime hours</div>
+        <div class="arrow">➔</div>
+        <div class="to">System runtime <span class="gold">fully decoupled</span> from your personal time</div>
+      </div>
+      <div class="shift-row">
+        <div class="from">The forever-executing "salesperson"</div>
+        <div class="arrow">➔</div>
+        <div class="to">The <span class="gold">operator</span> who produces profit through the system</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="engine" id="engine">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The 5-Kill Engine</span>
+      <h2 class="section-title">Your Weapon: <span class="gold">TNPSC 5-Kill Engine</span></h2>
+      <div class="divider">❖</div>
+      <p class="section-sub">Industrialize the sales process. Turn an unrepeatable "art" into a precise science that AI and teams can execute at scale.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-index">01</div>
+        <div class="step-key">TRUST</div>
+        <div class="sub">Trust · Authority Implant</div>
+        <h4>Break Defenses Instantly</h4>
+        <p>Skip the long trust-building. Ice-breaking directives and frame control establish "the expert" position in under three minutes.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">02</div>
+        <div class="step-key">NEED</div>
+        <div class="sub">Need · Deep Extraction</div>
+        <h4>Question to the Core</h4>
+        <p>Deep-excavation questioning lets customers voice anxieties they didn't know they had — elevating "painkiller" needs into a vision of rebirth.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">03</div>
+        <div class="step-key">PAIN</div>
+        <div class="sub">Pain · Cost Materialized</div>
+        <h4>Quantify Inaction</h4>
+        <p>A cost calculator and concrete scenarios make the "cost of not changing" undeniable. Urgency emerges on its own — no pressure required.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">04</div>
+        <div class="step-key">SOLUTION</div>
+        <div class="sub">Solution · Only Exit</div>
+        <h4>Anchor Value, Not Price</h4>
+        <p>Tailored-feel design × opportunity-cost comparison lets price shrink inside the loss-avoidance frame — and become trivial.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-index">05</div>
+        <div class="step-key">CLOSE</div>
+        <div class="sub">Close · Final Harvest</div>
+        <h4>Make "No" Illogical</h4>
+        <p>Logic traps that dissolve hesitation × scarcity design that guides the customer to decide at <strong>the most natural moment</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="taboo" id="taboo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow blood">Forbidden Lens</span>
+      <h2 class="section-title">Six Things <span class="gold">Most Courses Won't Say</span></h2>
+      <p class="section-sub">These six beliefs are the philosophical core of the program. Once you see closing through this lens, you won't unsee it.</p>
+    </div>
+
+    <div class="taboo-list">
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 01</div>
+        <h4>Selling isn't persuasion — it's pre-setting the outcome.</h4>
+        <p>Top closers never persuade. They design a flow so precise that customers walk themselves into the decision.</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 02</div>
+        <h4>Whoever asks, controls the room.</h4>
+        <p>Weak reps "present the product." Strong ones "build the frame with questions." Tempo belongs to the questioner.</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 03</div>
+        <h4>Price isn't a number — it's a loss-avoidance feeling.</h4>
+        <p>Same product, new frame, different price perception. "Expensive" and "cheap" are always relative.</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 04</div>
+        <h4>Objections aren't rejection — they're friction signals.</h4>
+        <p>When the customer says "let me think," they're not saying no. They're waiting for you to remove the last obstacle.</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 05</div>
+        <h4>AI isn't a tool — it's your <strong>second brain</strong>.</h4>
+        <p>AI's real power isn't replacing you. It's cloning the judgment of your best closer into 24/7 execution capacity.</p>
+      </div>
+      <div class="taboo-item reveal">
+        <div class="num">Taboo · 06</div>
+        <h4>Closing power doesn't belong in the customer's hands.</h4>
+        <p>It belongs in <strong>your system settings</strong> — from lead filtering to follow-up cadence, every step is pre-designed by you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="audience">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Selection · By Design</span>
+      <h2 class="section-title">This Program <span class="gold">Isn't for Everyone</span></h2>
+      <p class="section-sub">We only admit operators who want to build an empire — not students looking to sit through another lecture.</p>
+    </div>
+
+    <div class="audience-wrap">
+      <div class="aud-box yes reveal">
+        <div class="head">
+          <span class="tag">YES</span>
+          <h3>You Are Who We Want</h3>
+        </div>
+        <ul>
+          <li>SMB owners who want out of the "the founder closes every deal" trap</li>
+          <li>Sales directors who want the whole team to replicate their top performer</li>
+          <li>Marketing leads who want traffic to actually become revenue</li>
+          <li>High-ticket consultants, coaches, clinics, lawyers, and advisors</li>
+          <li>Founders who want AI at the core of how the business makes money</li>
+          <li>Teams willing to run a full system in 90 days — not just read slides</li>
+        </ul>
+      </div>
+
+      <div class="aud-box no reveal">
+        <div class="head">
+          <span class="tag">NO</span>
+          <h3>Please Don't Enroll</h3>
+        </div>
+        <ul>
+          <li>People hunting for "one magic script" that closes everyone</li>
+          <li>People expecting 10× revenue the day after the course ends</li>
+          <li>People unwilling to build processes or be measured by data</li>
+          <li>People who buy AI subscriptions with no strategy behind them</li>
+          <li>People who want to submit a "reflection paper" instead of real numbers</li>
+          <li>People content with their current revenue ceiling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="curriculum" id="curriculum">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The Full Curriculum</span>
+      <h2 class="section-title"><span class="gold">4 Phases · 12 Chapters</span> of Forbidden Material</h2>
+      <p class="section-sub">From psychological reset to the AI empire. Every chapter includes a "Forbidden Lens" — the underlying truth most trainers leave out.</p>
+    </div>
+
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">I</div>
+          <div class="stage-title">
+            <h3>Collapse & Awakening</h3>
+            <p>The Psychological Reset</p>
+          </div>
+        </div>
+        <div class="stage-goal">Demolish the psychological rubble of traditional sales thinking. See that past wins were luck — and past losses came from missing a system.</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">Chapter 01</div>
+          <h4>The End of Selling</h4>
+          <ul>
+            <li>The lie exposed: why "scripts" are painkillers for the mediocre</li>
+            <li>Power asymmetry: begging to sell vs. being begged to buy</li>
+            <li>Cognitive dead-end: why charisma can never scale</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Selling isn't persuasion — it's pre-setting the outcome.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 02</div>
+          <h4>From Hunter to Shepherd</h4>
+          <ul>
+            <li>The labor trap: the lowest form of trading time for deals</li>
+            <li>System defined: replicable, scalable, automatable</li>
+            <li>Power transfer: from the customer's hand into the system</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Hunters chase until they burn out. Shepherds build fences — and harvest.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">II</div>
+          <div class="stage-title">
+            <h3>The Forbidden Code</h3>
+            <p>Decode the Buyer</p>
+          </div>
+        </div>
+        <div class="stage-goal">Master the underlying logic of human decision-making. Compress complex psychology into concrete directives teams can execute and AI can amplify.</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">Chapter 03</div>
+          <h4>The Desire Hack</h4>
+          <ul>
+            <li>Pain rupture: convert "don't need" into "losing out by not buying"</li>
+            <li>Value distortion: make price feel irrelevant against loss</li>
+            <li>The only solution: position your offer as the one way through</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Customers buy pre-set futures, not features.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 04</div>
+          <h4>The Authority Loop</h4>
+          <ul>
+            <li>Authority projection: install "expert" positioning in 3 minutes</li>
+            <li>The validation trap: social proof × psychological resonance</li>
+            <li>Micro-commitments into the irreversible closing path</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Trust isn't accumulated. It's designed.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">III</div>
+          <div class="stage-title">
+            <h3>Power Acquisition</h3>
+            <p>The 5-Kill Engine</p>
+          </div>
+        </div>
+        <div class="stage-goal">Build the TNPSC 5-Kill Engine. Transform uncontrollable personal art into a precise science any team and AI can execute.</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">Chapter 05</div>
+          <h4>TRUST · Trust Module</h4>
+          <ul>
+            <li>Ice-breaking directives and high-leverage openings</li>
+            <li>Frame control: whoever asks, leads</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Tempo belongs to the questioner, not the talker.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 06</div>
+          <h4>NEED · Need Extraction Module</h4>
+          <ul>
+            <li>Deep-excavation method and continuous-probe architecture</li>
+            <li>Need elevation: from painkiller to rebirth</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | What the customer can't articulate is exactly your closing leverage.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 07</div>
+          <h4>PAIN · Pain Amplification Module</h4>
+          <ul>
+            <li>The cost calculator: quantify the cost of inaction</li>
+            <li>Scenario materialization: make future failure visible</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Urgency isn't pushed. It's calculated by the customer themselves.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 08</div>
+          <h4>SOLUTION · Anchoring Module</h4>
+          <ul>
+            <li>Tailored-feel design: make them feel it was built for them</li>
+            <li>Value comparison: anchor to opportunity cost</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | The offer isn't "sold." It's the moment they recognize themselves in it.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 09</div>
+          <h4>CLOSE · Command Closing Module</h4>
+          <ul>
+            <li>Logic traps that dissolve hesitation</li>
+            <li>Scarcity design and decision-point architecture</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Make "not buying" feel like self-contradiction.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage reveal">
+      <div class="stage-header">
+        <div class="left">
+          <div class="stage-number">IV</div>
+          <div class="stage-title">
+            <h3>Ascension · The AI Empire</h3>
+            <p>AI-Powered Empire</p>
+          </div>
+        </div>
+        <div class="stage-goal">Turn AI into your 24/7 sleepless sales force. Free yourself from execution — become the system operator, not another hand on deck.</div>
+      </div>
+      <div class="chapter-list">
+        <div class="chapter">
+          <div class="ch-num">Chapter 10</div>
+          <h4>AI Traffic Engine</h4>
+          <ul>
+            <li>Desire-driven copy at scale: hooks that hit human wiring</li>
+            <li>Precision filtering: AI segments for high-intent, high-budget buyers</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | List quality — not quantity — determines the empire's size.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 11</div>
+          <h4>AI Nurturing & Follow-up</h4>
+          <ul>
+            <li>1-to-1 automated dialogue that mirrors high-EQ closers</li>
+            <li>Behavioral tagging: AI spots hesitation and auto-triggers the next message</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Let the customer arrive at the decision through the conversation itself.</div>
+        </div>
+        <div class="chapter">
+          <div class="ch-num">Chapter 12</div>
+          <h4>Infinite Scale</h4>
+          <ul>
+            <li>Modular migration: port the system across products and markets</li>
+            <li>From salesperson to operator: an empire that prints profit without you</li>
+          </ul>
+          <div class="taboo-line">Forbidden lens | Real wealth is cash flow that keeps running while you sleep.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="empire" id="empire">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">AI Empire · 24h Army</span>
+      <h2 class="section-title">Deploy AI as Your <span class="gold">Sleepless Sales Force</span></h2>
+      <p class="section-sub">Not another tool. An always-on division. Traffic, nurture, follow-up, remarketing — all automated, all aligned.</p>
+    </div>
+
+    <div class="empire-grid">
+      <div class="empire-card reveal">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4h10l4 4-4 4H7l-4-4z"/><path d="M7 12h10"/></svg>
+        </div>
+        <h4>Traffic Squad</h4>
+        <p>Mass-produce hooks, ad copy, video scripts, and landing pages. Run A/B tests 24/7 without human fatigue.</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M6 12h12M9 18h6"/></svg>
+        </div>
+        <h4>Lead Sorter</h4>
+        <p>Auto-segment leads by behavior, source, and intent. Your reps only touch the hot ones.</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c0-5 4-8 9-8s9 3 9 8-4 8-9 8c-1 0-2 0-3-.3L3 20l1-4c-.6-1.2-1-2.5-1-4z"/></svg>
+        </div>
+        <h4>Chat Vanguard</h4>
+        <p>24/7 auto-replies, needs collection, booking funnels. Customers get handled even while you sleep.</p>
+      </div>
+      <div class="empire-card reveal">
+        <div class="icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-5"/></svg>
+        </div>
+        <h4>Behavior Tracker</h4>
+        <p>Viewed the page? Clicked the link? Abandoned the form? AI triggers the right message at the right moment — so no lead ever dies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instructor" id="instructor">
+  <div class="container">
+    <div class="instructor-wrap">
+      <div class="instructor-portrait reveal">K</div>
+      <div class="instructor-body reveal">
+        <span class="eyebrow">Your Mentor</span>
+        <h3 class="serif">Build Your AI Sales Empire — Together</h3>
+        <div class="sub">Empire Architect · Operator Trainer</div>
+        <p>Over the past 10 years, guided 100+ companies from "founder-dependent selling" to systemized, replicable, AI-amplified closing — spanning B2B services, high-ticket education, aesthetic clinics, real estate, and consulting.</p>
+        <p>I don't teach scripts. I don't sell tool subscriptions. I design closing as a corporate asset — so AI genuinely drives revenue and you finally stop being another pair of hands on the deal.</p>
+        <div class="instructor-creds">
+          <div class="cred"><div class="n">100+</div><div class="l">Companies Coached</div></div>
+          <div class="cred"><div class="n">10+ yrs</div><div class="l">System Design</div></div>
+          <div class="cred"><div class="n">24h</div><div class="l">AI Methodology</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">From the Front Line</span>
+      <h2 class="section-title">What <span class="gold">Empire Members</span> Say</h2>
+      <p class="section-sub">They didn't just attend — they took the blueprint home and put their companies to work.</p>
+    </div>
+
+    <div class="test-grid">
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>I used to blame my team's selling skills. The truth was — I never had a system. One month after deploying the 5-Kill Engine, our proposal close rate jumped from 22% to 41%.</blockquote>
+        <div class="test-author">
+          <div class="avatar">W</div>
+          <div class="who"><h5>W., CEO</h5><p>B2B Consulting</p></div>
+          <span class="result">+19% CR</span>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>Once AI follow-up was running, reps stopped chasing LINE threads manually. Evening auto-replies and booking reminders alone added 30+ qualified appointments per month.</blockquote>
+        <div class="test-author">
+          <div class="avatar">L</div>
+          <div class="who"><h5>L., Founder</h5><p>High-Ticket Education</p></div>
+          <span class="result">+30 bookings/mo</span>
+        </div>
+      </div>
+      <div class="test-card reveal">
+        <span class="q">"</span>
+        <blockquote>The real value: we didn't just learn — we built our SOPs, question libraries, and objection playbooks in class. New-hire ramp time dropped from 3 months to 3 weeks.</blockquote>
+        <div class="test-author">
+          <div class="avatar">C</div>
+          <div class="who"><h5>C., COO</h5><p>Aesthetic Clinic Brand</p></div>
+          <span class="result">-75% ramp time</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Choose Your Track</span>
+      <h2 class="section-title">Pick Your <span class="gold">Empire Scale</span></h2>
+      <p class="section-sub">From a 12-hour awakening bootcamp to a 36-hour mentor-led rollout — three intensities for three levels of ambition.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card reveal">
+        <div class="plan-name">Version A</div>
+        <div class="plan-title serif">The Awakening Bootcamp</div>
+        <p class="plan-sub">Ideal for executive classes and kickoff sessions.</p>
+        <div class="plan-hours">
+          <span class="big">12</span>
+          <span class="unit">hours</span>
+          <span class="inquire">Details via LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>6 sessions × 2 hours each</li>
+          <li>Complete download of the 4-phase mental model</li>
+          <li>TNPSC 5-Kill Engine methodology</li>
+          <li>AI closing blueprint walkthrough</li>
+          <li>Deliverable: sales-process diagnostic</li>
+          <li class="muted">Company-specific diagnosis</li>
+          <li class="muted">90-day advisory</li>
+        </ul>
+        <a href="#line" class="btn btn-ghost">Ask About Version A</a>
+      </div>
+
+      <div class="price-card highlight reveal">
+        <div class="plan-name">Version B</div>
+        <div class="plan-title serif">The Empire Build</div>
+        <p class="plan-sub">Ideal for company-wide training and consulting kickoffs.</p>
+        <div class="plan-hours">
+          <span class="big">24</span>
+          <span class="unit">hours</span>
+          <span class="inquire">Details via LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>12 sessions × 2 hours each</li>
+          <li>Includes everything in Version A</li>
+          <li>All 12 forbidden chapters, fully unpacked</li>
+          <li>Workshops × case dissection</li>
+          <li>Hands-on AI (ChatGPT / Claude / Make / n8n)</li>
+          <li>Complete module deliverables</li>
+          <li class="muted">90-day advisory</li>
+        </ul>
+        <a href="#line" class="btn btn-gold">Lock In Version B</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="plan-name">Version C</div>
+        <div class="plan-title serif">Operator Mentorship</div>
+        <p class="plan-sub">For companies serious about running the full rollout.</p>
+        <div class="plan-hours">
+          <span class="big">36</span>
+          <span class="unit">hrs+</span>
+          <span class="inquire">Details via LINE</span>
+        </div>
+        <ul class="feature-list">
+          <li>Course + workshops + system design + outcome review</li>
+          <li>Includes everything in Version B</li>
+          <li>Company diagnosis and full customization</li>
+          <li>End-to-end AI automation rollout</li>
+          <li>90-day KPI tracking and optimization</li>
+          <li>Graduation requires real closing metrics</li>
+          <li>Cross-department workflow design</li>
+        </ul>
+        <a href="#line" class="btn btn-ghost">Apply for Version C</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title">Before You Enroll</h2>
+    </div>
+    <div class="faq-wrap reveal">
+      <details>
+        <summary>I have no sales background. Is this course still for me?</summary>
+        <div class="body">Yes. This program teaches systems thinking — not scripts. Because the framework doesn't lean on personal selling instinct, founders, new hires, and senior managers can all start building their closing blueprint from day one.</div>
+      </details>
+      <details>
+        <summary>Is this online, in-person, or both?</summary>
+        <div class="body">Version A runs as online public cohorts and in-house training. Version B is hybrid — live workshops plus online modules. Version C is custom mentorship shaped around your company. Add LINE to get the next cohort schedule.</div>
+      </details>
+      <details>
+        <summary>Do I need prior AI knowledge or coding skills?</summary>
+        <div class="body">No. All tools used (ChatGPT, Claude, Make, n8n) are no-code. The point isn't the tool — it's placing the right tool at the right node of the right process.</div>
+      </details>
+      <details>
+        <summary>How is this different from other sales or AI courses?</summary>
+        <div class="body">Most sales courses teach "better talking." Most AI courses teach "tool usage." This program combines both into an enterprise-grade closing system — from mindset reset to the 5-Kill Engine to full AI rollout — producing a blueprint and SOPs your company can actually run.</div>
+      </details>
+      <details>
+        <summary>What do I actually walk away with?</summary>
+        <div class="body">(1) Your company's closing process flowchart, (2) customer journey + 3-layer need analysis, (3) 20-question discovery bank, (4) objection-handling library, (5) AI conversation flowchart, (6) automated follow-up logic, (7) your company's AI closing blueprint, (8) a 90-day rollout roadmap. Version C requires real closing metrics at graduation.</div>
+      </details>
+      <details>
+        <summary>Can I use company training budget or public subsidies?</summary>
+        <div class="body">Yes. In-house editions issue proper invoices and are eligible for regional workforce-training subsidies (per cohort announcement). Add LINE for the paperwork.</div>
+      </details>
+      <details>
+        <summary>Is post-course support included?</summary>
+        <div class="body">Version B and C both include 90 days of LINE group Q&A. Version C adds 1-on-1 mentor time for company-specific rollouts.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="container">
+    <span class="eyebrow blood">The Final Requirement</span>
+    <h2 class="serif">We Do Not Accept <span class="gold">"Reflection Papers."</span></h2>
+
+    <div class="quote-wall">
+      <p><strong>The only accepted proof of graduation:</strong></p>
+      <p>A <strong>real closing record</strong> produced by this system,<br/>and your <strong>company's AI automation flowchart</strong>.</p>
+      <p>The value of this course isn't measured by how many ideas you heard.<br/>It's measured by whether your company's closing process <strong>starts running</strong>.</p>
+      <p>You don't need to become a sharper salesperson.<br/>You need your company to no longer need the role of "salesperson" at all.</p>
+      <p class="sig">— The Key to Sales V2 · Admission Manifesto</p>
+    </div>
+
+    <p style="color: var(--ink-1); max-width: 640px; margin: 0 auto; font-size: 15px;">
+      We don't promise everyone makes it into the empire.<br/>But if you're willing to deliver real outcomes — we'll run every mile with you.
+    </p>
+  </div>
+</section>
+
+<section class="final-cta" id="line">
+  <div class="container">
+    <span class="eyebrow">Next Step</span>
+    <h2 class="serif">Starting today — <br/><span class="gold">upgrade closing from effort to system</span>.</h2>
+    <p>Add the LINE Official Account to receive the Sales Process Self-Diagnostic and lock in your seat for the next cohort. Seats are limited — first come, first served.</p>
+    <a href="#" class="btn btn-gold" id="line-cta">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="currentColor"><path d="M20 4C10 4 2 10.4 2 18.4c0 7.2 6.4 13.2 15 14.4.6.1 1.4.3 1.6.8.2.4.1 1.1.1 1.6l-.3 1.6c-.1.5-.4 1.8 1.6 1 2-.8 10.8-6.4 14.8-10.9 2.8-3 4.2-6.4 4.2-10C39 10.4 31 4 20 4z"/></svg>
+      Add LINE · Lock In My Seat
+    </a>
+    <p style="margin-top:24px; font-size:13px; color: var(--ink-3);">
+      Or contact our support line | Mon–Fri, 10:00 – 18:00
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="logo">
+      <div class="logo-mark">K</div>
+      <div class="logo-name">The Key to Sales V2 · The Sales Empire</div>
+    </div>
+    <div class="links">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#pricing">Plans</a>
+      <a href="#faq">FAQ</a>
+      <a href="#line">Contact</a>
+    </div>
+    <div class="copy">© 2026 The Key to Sales · End the era of sales effort. Build your AI-driven empire.</div>
+  </div>
+</footer>
+
+<a href="#line" class="floating-line">
+  <svg width="20" height="20" viewBox="0 0 40 40" fill="currentColor"><path d="M20 4C10 4 2 10.4 2 18.4c0 7.2 6.4 13.2 15 14.4.6.1 1.4.3 1.6.8.2.4.1 1.1.1 1.6l-.3 1.6c-.1.5-.4 1.8 1.6 1 2-.8 10.8-6.4 14.8-10.9 2.8-3 4.2-6.4 4.2-10C39 10.4 31 4 20 4z"/></svg>
+  Enroll via LINE
+</a>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
